@@ -1,0 +1,1307 @@
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+
+/* Theme Variables */
+:root {
+    --card-bg: rgba(44, 62, 80, 0.8);
+    --card-border: rgba(52, 152, 219, 0.15);
+    --card-hover: rgba(52, 152, 219, 0.3);
+    --accent-glow: rgba(52, 152, 219, 0.1);
+    --shadow-subtle: 0 4px 6px rgba(0, 0, 0, 0.2);
+    --shadow-strong: 0 8px 16px rgba(0, 0, 0, 0.3);
+    --gradient-start: #3498db;
+    --gradient-end: #2980b9;
+    --section-gap: 4rem;
+    --card-inner-padding: 1.8rem;
+    --highlight-shadow: 0 0 20px rgba(52, 152, 219, 0.15);
+    
+    /* Card Border Colors */
+    --border-primary: #3498db;    /* Blue - Default/Interface */
+    --border-secondary: #2980b9;  /* Dark Blue - Architecture */
+    --border-success: #2ecc71;    /* Green - Features */
+    --border-danger: #e74c3c;     /* Red - Challenges */
+    --border-warning: #f1c40f;    /* Yellow - Details */
+    --border-info: #9b59b6;       /* Purple - Metrics */
+    --border-special: #1abc9c;    /* Teal - Acknowledgements */
+}
+
+/* Base Layout */
+.project-page {
+    background: var(--background);
+    color: var(--text-color);
+}
+
+.project-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 2rem 2rem;
+}
+
+/* Header Styling */
+.project-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.project-title {
+    margin-bottom: 0.5rem; /* Reduced from 1rem */
+}
+
+.project-title h1 {
+    font-family: 'Odibee Sans', sans-serif;
+    font-size: 4rem;  /* Initial font size */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem; /* Reduced from 2rem */
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: var(--highlight-shadow);
+    white-space: nowrap;  /* Prevents text from wrapping */
+    overflow: hidden;     /* Ensures overflow is hidden */
+    text-overflow: clip;  /* Clips the text if it overflows */
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.project-logo-container {
+    margin-bottom: 0; /* Remove gap */
+    text-align: center;
+}
+
+.project-logo {
+    width: 240px; /* Double the size */
+    height: 240px; /* Double the size */
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.project-logo:hover {
+    transform: scale(1.1);
+}
+
+/* Common Card Styles */
+.standard-card {
+    background: linear-gradient(145deg, var(--card-bg), rgba(44, 62, 80, 0.9));
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: var(--card-inner-padding);
+    box-shadow: var(--shadow-subtle);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.standard-card:hover {
+    border-color: var(--card-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-strong);
+}
+
+/* Grid Layouts */
+.standard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+/* Section Headers */
+.section-header {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    margin-bottom: 2.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+    border-radius: 2px;
+}
+
+/* List Styling */
+.standard-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.standard-list li {
+    padding: 0.8rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.5;
+}
+
+.standard-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--gradient-start);
+    transition: transform 0.3s ease;
+}
+
+.standard-list li:hover::before {
+    transform: translateX(3px);
+}
+
+/* Card Headers */
+.card-header {
+    color: var(--accent-color);
+    margin-bottom: 1.2rem;
+    font-size: 1.2rem;
+    border-bottom: 1px solid var(--card-border);
+    padding-bottom: 0.8rem;
+}
+
+/* Metrics Styling */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.metric-group h4 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-wrapper {
+        padding: 80px 1rem 1rem;
+    }
+
+    .project-title h1 {
+        font-size: 2.5rem;  /* Adjust font size for smaller screens */
+    }
+
+    .metrics-grid,
+    .standard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-links {
+        flex-direction: column;
+    }
+}
+
+/* Apply Base Styles */
+.stat, .detail-card, .feature-card, .arch-component, 
+.flow-step, .challenge-card, .stack-card {
+    background: linear-gradient(
+        145deg,
+        var(--card-bg),
+        rgba(44, 62, 80, 0.9)
+    );
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: var(--card-inner-padding);
+    box-shadow: var(--shadow-subtle);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.stat:hover, 
+.detail-card:hover, 
+.feature-card:hover, 
+.arch-component:hover, 
+.flow-step:hover, 
+.challenge-card:hover, 
+.stack-card:hover {
+    border-color: var(--card-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-strong);
+}
+
+/* Common Grid System */
+.project-stats, 
+.features-grid, 
+.architecture-details,
+.tech-stack-grid, 
+.challenges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+/* Common Card Headers */
+.stat h4,
+.detail-card h3,
+.feature-card h3,
+.arch-component h3,
+.flow-step h4,
+.challenge-card h3,
+.stack-card h3 {
+    color: var(--accent-color);
+    margin-bottom: 1.2rem;
+    font-size: 1.2rem;
+    border-bottom: 1px solid var(--card-border);
+    padding-bottom: 0.8rem;
+    position: relative;
+}
+
+/* Specific Component Styling */
+.architecture-section {
+    border-radius: 12px;
+    padding: 2.5rem;
+    margin: 4rem 0;
+    background: none; /* Remove background */
+    box-shadow: none; /* Remove box shadow */
+    border: none; /* Remove border */
+}
+
+.architecture-section .section-title {
+    text-align: left; /* Align title to the left */
+}
+
+.arch-img {
+    max-width: 100%;
+    border-radius: 8px;
+    border: none;
+    box-shadow: var(--shadow-strong);
+    padding: 2rem;
+    background: linear-gradient(
+        145deg,
+        var(--card-bg),
+        rgba(44, 62, 80, 0.9)
+    );
+    transition: transform 0.3s ease;
+}
+
+.arch-img:hover {
+    transform: scale(1.02);
+}
+
+/* List Styling */
+.feature-list, .component-list, .stack-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feature-list li, .component-list li, .stack-list li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.5;
+}
+
+.feature-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var (--gradient-start);
+    transition: transform 0.3s ease;
+}
+
+.feature-list li:hover::before {
+    transform: translateX(3px);
+}
+
+/* Challenge Cards */
+.challenge-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.challenge-header h3 {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.improvement {
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: var(--accent-color);
+}
+
+/* Technical Challenges Section Refinements */
+.technical-challenges {
+    margin-bottom: var(--section-gap);
+}
+
+.challenge-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.challenge-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.challenge-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.problem {
+    color: #e74c3c;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    padding: 0.8rem;
+    background: rgba(231, 76, 60, 0.1);
+    border-radius: 6px;
+}
+
+.solution {
+    flex: 1;
+}
+
+.solution h4 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.solution ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.solution ul li {
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    line-height: 1.5;
+}
+
+.solution ul li:before {
+    content: "✓";
+    color: #2ecc71;
+    margin-right: 1rem;
+    font-weight: bold;
+}
+
+/* Project Links */
+.project-links {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.primary-link, .secondary-link {
+    padding: 1rem 2.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer; /* Ensure cursor changes to pointer */
+}
+
+.primary-link {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    color: var(--text-color);
+    box-shadow: var(--highlight-shadow);
+    cursor: pointer; /* Added cursor pointer */
+}
+
+.secondary-link {
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    border-width: 2px;
+}
+
+/* Data Flow Cards */
+.data-flow {
+    margin-top: 4rem;
+}
+
+.flow-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.flow-step {
+    position: relative;
+    padding: 2rem 1.8rem 1.8rem;
+    margin-top: 1rem;
+}
+
+.flow-step p {
+    margin-top: 0.5rem;
+    line-height: 1.6;
+}
+
+/* Data Flow Improvements */
+.step-number {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 35px;
+    height: 35px;
+    color: var(--text-color);
+    background: var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: 2px solid var(--card-border);
+    box-shadow: var(--shadow-subtle);
+}
+
+/* Project Details Cards */
+.project-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 4rem 0;
+}
+
+.detail-card {
+    height: 100%; /* Ensure equal height */
+}
+
+.detail-card ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.detail-card ul li {
+    padding: 0.6rem 0;
+    display: flex;
+    align-items: flex-start;
+    line-height: 1.5;
+}
+
+.detail-card ul li:before {
+    content: "→";
+    color: var(--gradient-start);
+    margin-right: 1rem;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.detail-card ul li:hover:before {
+    transform: translateX(3px);
+}
+
+/* Project Showcase Styling */
+.project-showcase {
+    margin: 2rem 0;
+}
+
+.screenshot-container {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--card-bg);
+    padding: 2rem; /* Match padding with architecture image card */
+    box-shadow: var(--shadow-strong);
+    border: 1px solid var (--card-border);
+    transition: transform 0.3s ease;
+}
+
+.screenshot-container:hover {
+    transform: scale(1.02);
+}
+
+.project-screenshot {
+    width: 100%; /* Ensure the image fits within the container */
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.screenshot-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background: linear-gradient(
+        to top,
+        rgba(44, 62, 80, 0.9),
+        rgba(44, 62, 80, 0)
+    );
+    transition: opacity 0.3s ease;
+}
+
+.screenshot-caption {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    opacity: 0.9;
+    position: absolute;
+    bottom: 3px; /* Move the caption text down by 3 pixels */
+    left: 50%;
+    transform: translateX(-50%); /* Center the caption text */
+    text-align: center;
+    white-space: nowrap; /* Ensure the caption text stays on one line */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Enhanced tag styling */
+.project-tags {
+    margin-bottom: 2rem; /* Increased from 1rem */
+}
+
+.project-tags span {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    margin: 0.2rem; /* Added margin for spacing */
+}
+
+.project-tags span:hover {
+    border-color: var(--accent-color);
+    box-shadow: var(--highlight-shadow);
+    transform: translateY(-2px);
+}
+
+/* Flow steps improvement */
+.step-number {
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    box-shadow: var(--highlight-shadow);
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+    padding: 0.8rem 1.5rem;
+/* Back button enhancement */
+.back-button {
+    position: relative;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    background: var(--card-bg);
+    box-shadow: var(--shadow-subtle);
+}
+
+/* Focus states for accessibility */
+a:focus, button:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* Acknowledgements Section Styling */
+.acknowledgements {
+    margin: 4rem 0;
+    padding: 2rem;
+    background: none;
+    border-radius: 12px;
+    box-shadow: none;
+}
+
+.acknowledgements h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.acknowledgement-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-subtle);
+}
+
+.acknowledgement-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+/* Standardized Section Styling */
+.project-section {
+    margin-bottom: 4rem; /* Reduced from 6rem */
+    padding: 2rem;
+    border-radius: 12px;
+    scroll-margin-top: 100px; /* Adjust this value based on your header height */
+}
+
+.project-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.project-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+    border-radius: 2px;
+}
+
+/* Standardized Card Styling */
+.standard-card {
+    background: linear-gradient(145deg, var(--card-bg), rgba(44, 62, 80, 0.9));
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: var(--card-inner-padding);
+    box-shadow: var(--shadow-subtle);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.standard-card:hover {
+    border-color: var(--card-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-strong);
+}
+
+/* Standardized Grid Layout */
+.standard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+/* Apply standardized styles to existing components */
+.project-overview,
+.architecture-section,
+.core-features,
+.project-details,
+.technical-challenges,
+.acknowledgements {
+    composes: project-section;
+}
+
+.stat,
+.arch-component,
+.feature-card,
+.detail-card,
+.challenge-card,
+.flow-step,
+.acknowledgement-card {
+    composes: standard-card;
+}
+
+.project-stats,
+.architecture-details,
+.features-grid,
+.challenges-grid {
+    composes: standard-grid;
+}
+
+/* Consistent List Styling */
+.standard-list {
+    list-style: none;
+    padding: 0;
+}
+
+.standard-list li {
+    padding: 0.8rem 0;
+    display: flex;
+    align-items: flex-start;
+    line-height: 1.5;
+}
+
+.standard-list li::before {
+    content: "→";
+    color: var(--gradient-start);
+    margin-right: 1rem;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.standard-list li:hover::before {
+    transform: translateX(3px);
+}
+
+/* Consistent Header Styling */
+.card-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.card-header h3 {
+    color: var(--accent-color);
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+/* Update existing components to use new standardized styles */
+.feature-list,
+.component-list,
+.detail-card ul,
+.solution ul {
+    composes: standard-list;
+}
+
+.challenge-header,
+.feature-card h3,
+.arch-component h3 {
+    composes: card-header;
+}
+
+/* Hero Screenshot Styling */
+.hero-screenshot {
+    position: relative;
+    width: 100%;
+    margin: -2rem 0 3rem; /* Negative margin to pull it up */
+    padding: 0;
+}
+
+.hero-screenshot .screenshot-container {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-shadow: var(--shadow-strong);
+}
+
+.hero-screenshot .project-screenshot {
+    width: 100%;
+    border-radius: 0;
+    max-height: 600px;
+    object-fit: cover;
+}
+
+/* Move the existing showcase to a smaller size */
+.project-showcase {
+    margin: 2rem 0;
+}
+
+.project-showcase .screenshot-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Analysis Screenshots Styling */
+.analysis-screenshots {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Changed from flex to grid */
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.analysis-screenshots .screenshot-container {
+    width: 100%;
+    height: 100%; /* Ensure equal height */
+    margin: 0;
+    background: var(--card-bg);
+    padding: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .analysis-screenshots {
+        grid-template-columns: 1fr; /* Stack on mobile */
+        gap: 1.5rem;
+    }
+}
+
+.feature-highlight {
+    text-align: center;
+    max-width: 800px;
+    margin: 2rem auto 0;
+    padding: 1.5rem;
+    background: var(--card-bg);
+    border-radius: 12px;
+    border: 1px solid var(--card-border);
+}
+
+.feature-highlight p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+    .analysis-screenshots {
+        gap: 1.5rem;
+    }
+    
+    .analysis-screenshots .screenshot-container {
+        padding: 1rem;
+    }
+}
+
+/* Interface Details Styling */
+.interface-details {
+    display: grid;
+    gap: 2rem;
+}
+
+.interface-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 2rem;
+    border: 1px solid var(--card-border);
+    box-shadow: var(--shadow-subtle);
+    border-left: 4px solid var(--gradient-start);
+}
+
+.interface-card h3 {
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.cluster-info {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.cluster-info li {
+    padding: 0.5rem 0;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.cluster-info li::before {
+    content: "•";
+    position: absolute;
+    left: 0.5rem;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.cluster-info li.yellow::before { color: #f1c40f; }
+.cluster-info li.orange::before { color: #e67e22; }
+.cluster-info li.red::before { color: #e74c3c; }
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.metric-group h4 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.metric-group ul {
+    list-style: none;
+    padding: 0;
+}
+
+.metric-group ul li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.metric-group ul li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--gradient-start);
+}
+
+@media (max-width: 768px) {
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Cluster Behavior Section */
+.cluster-behavior {
+    margin: 1.5rem 0;
+}
+
+.behavior-list {
+    list-style: none;
+    padding: 0;
+}
+
+.behavior-list li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.5;
+}
+
+.behavior-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var (--gradient-start);
+}
+
+/* Nested Incident Details List */
+.detail-sublist {
+    list-style: none;
+    padding-left: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+.detail-sublist li {
+    padding: 0.3rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 0.95em;
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+.detail-sublist li::before {
+    content: "−";
+    position: absolute;
+    left: 0;
+    color: var(--gradient-start);
+}
+
+/* Map Interface Metrics */
+.map-interface .metrics-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.map-interface .cluster-info {
+    margin: 0;
+}
+
+.map-interface .cluster-info li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.map-interface .cluster-info li::before {
+    font-size: 1.2rem;
+    left: 0;
+}
+
+.map-interface .metric-group ul li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.map-interface .metric-group ul li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--gradient-start);
+}
+
+/* Technical Deep Dive Styling */
+.deep-dive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.deep-dive-card {
+    background: linear-gradient(145deg, var(--card-bg), rgba(44, 62, 80, 0.9));
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: var(--card-inner-padding);
+    box-shadow: var(--shadow-subtle);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.deep-dive-card:hover {
+    border-color: var(--card-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-strong);
+}
+
+.deep-dive-card h3 {
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    border-bottom: 1px solid var(--card-border);
+    padding-bottom: 0.8rem;
+}
+
+/* Performance Metrics Styling */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.metric-card {
+    background: linear-gradient(145deg, var(--card-bg), rgba(44, 62, 80, 0.9));
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: var(--card-inner-padding);
+    box-shadow: var(--shadow-subtle);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border-left: 4px solid #9b59b6; /* Purple accent */
+}
+
+.metric-card:hover {
+    border-color: var(--card-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-strong);
+}
+
+.metric-card h3 {
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    border-bottom: 1px solid var(--card-border);
+    padding-bottom: 0.8rem;
+    text-align: left;
+}
+
+.metric-list {
+    list-style: none;
+    padding: 0;
+}
+
+.metric-list li {
+    padding: 0.6rem 0;
+    display: flex;
+    align-items: flex-start;
+    line-height: 1.5;
+    border: none;
+    text-align: left;
+}
+
+.metric-list li::before {
+    content: "→";
+    color: var(--gradient-start);
+    margin-right: 1rem;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.metric-list li:hover::before {
+    transform: translateX(3px);
+}
+
+/* Technical Deep Dive Styling */
+.deep-dive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.deep-dive-card {
+    composes: standard-card;
+    border-left: 4px solid var(--gradient-start);
+}
+
+.deep-dive-card h3 {
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+/* Performance Metrics Styling */
+.metric-card {
+    composes: standard-card;
+    text-align: center;
+    padding: 2rem;
+}
+
+.metric-card h3 {
+    color: var(--gradient-start);
+    margin-bottom: 1.5rem;
+}
+
+.metric-list {
+    list-style: none;
+    padding: 0;
+}
+
+.metric-list li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.metric-list li:last-child {
+    border-bottom: none;
+}
+
+/* Card Accent Borders */
+.interface-card { border-left: 4px solid var(--border-primary); }
+.arch-component { border-left: 4px solid var(--border-secondary); }
+.feature-card { border-left: 4px solid var(--border-success); }
+.challenge-card { border-left: 4px solid var(--border-danger); }
+.detail-card { border-left: 4px solid var(--border-warning); }
+.metric-card { border-left: 4px solid var(--border-info); }
+.acknowledgement-card { border-left: 4px solid var(--border-special); }
+
+/* Update hover states to maintain border color */
+.interface-card:hover,
+.arch-component:hover,
+.feature-card:hover,
+.challenge-card:hover,
+.detail-card:hover,
+.metric-card:hover,
+.acknowledgement-card:hover {
+    border-left-color: currentColor;
+}
+
+/* Content Guide Styling */
+.content-guide {
+    position: fixed;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--card-border);
+    box-shadow: var(--shadow-subtle);
+    z-index: 100;
+    background: linear-gradient(145deg, var(--card-bg), rgba(44, 62, 80, 0.95));
+    backdrop-filter: blur(10px);
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.content-guide ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.content-guide li {
+    margin: 0.8rem 0;
+}
+
+.content-guide a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+}
+
+.content-guide a:hover {
+    background: var(--card-hover);
+    color: var(--accent-color);
+    transform: translateX(5px);
+}
+
+/* Live Site Link Styling */
+.live-site-link {
+    position: relative;
+    z-index: 1;
+    margin: 2rem 0; /* Increased top margin from 1.5rem */
+    text-align: center;
+}
+
+.live-site-link .primary-link {
+    display: inline-block;
+    font-size: 1.1rem;
+    padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 25px; /* Made the link rounder */
+    transition: all 0.3s ease;
+    box-shadow: var(--highlight-shadow);
+    cursor: pointer; /* Added cursor pointer */
+}
+
+.live-site-link .primary-link:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-strong);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .content-guide {
+        display: none;
+    }
+}
+
+/* Add paragraph indentation */
+.project-section p {
+    text-indent: 2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+/* Exception for headers and cards that shouldn't have indentation */
+.project-header p,
+.interface-card p,
+.challenge-content p,
+.flow-step p,
+.metric-group p,
+.stat p {  /* Added stat class */
+    text-indent: 0;
+}
+
+/* Source Code Link Styling */
+.source-code-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: transparent;
+    border: 2px solid var(--gradient-start);
+    margin-left: 1rem;
+    vertical-align: middle;
+    transition: all 0.3s ease;
+    cursor: pointer; /* Ensure cursor changes to pointer */
+    text-decoration: none; /* Ensure no underline */
+}
+
+.source-code-link:hover {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    transform: translateY(-2px);
+    box-shadow: var(--highlight-shadow);
+    text-decoration: none; /* Ensure no underline */
+}
+
+.code-icon {
+    color: var(--gradient-start);
+    font-size: 1rem;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.source-code-link:hover .code-icon {
+    color: var(--text-color);
+}
+
+#particles-js {
+    position: absolute;
+    z-index: 0;
+}

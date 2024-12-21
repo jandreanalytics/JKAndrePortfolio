@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <div id="particles-js"></div>
+    
+    <nav>
+        <div class="nav-content">
+            <button class="tab-button active" data-tab="home">Home</button>
+            <button class="tab-button" data-tab="skills">Skills</button>
+            <button class="tab-button" data-tab="projects">Projects</button>
+            <button class="tab-button" data-tab="experience">Experience</button>
+            <button class="tab-button" data-tab="contact">Contact</button>
+            <a href="./resume/resume.pdf" download="JKA_Resume.pdf" class="resume-nav-link">
+                <span class="resume-text">Résumé</span>
+            </a>
+        </div>
+    </nav>
+
+    <main class="content-wrapper">
+        <section id="home" class="tab-content active">
+            <div class="hero-section">
+                <div class="hero-content">
+                    <h1>J. Kristopher Andre</h1>
+                    <h2>Data Visualization & Environmental Analytics</h2>
+                </div>
+                <div class="hero-about">
+                    <p>I'm a self-taught developer and data analyst with a Bachelor of Science in Biology from George Mason University. I combine scientific research methods with modern data visualization techniques to tackle complex challenges in urban ecology and conservation.</p>
+                    
+                    <p>My approach is straightforward: when faced with a new challenge, I actively seek out the knowledge and resources needed to solve it. This self-directed learning style has enabled me to rapidly adapt and expand my technical toolkit, from GIS systems to full-stack development.</p>
+                    
+                    <p>Through my independent research and freelance work, I've developed expertise in data analysis, visualization, and automation, successfully applying these skills to both scientific research and business optimization.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="tab-content">
+            <h2>Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">📊</div>
+                        <h3>Scientific Analysis & Research</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li>Data Analysis & Visualization</li>
+                        <li>Geographic Information Systems</li>
+                        <li>Environmental Data Analysis</li>
+                        <li>Statistical Analysis</li>
+                        <li>Research Methodology</li>
+                        <li>Pattern Recognition</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">💻</div>
+                        <h3>Development & Technical</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li>JavaScript & Web Development</li>
+                        <li>Python for Data Processing</li>
+                        <li>Database Management</li>
+                        <li>API Development</li>
+                        <li>Leaflet.js & Map Integration</li>
+                        <li>D3.js & Chart.js</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">🛠️</div>
+                        <h3>Tools & Technologies</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li>Firebase & Cloud Services</li>
+                        <li>Advanced Excel Analysis</li>
+                        <li>Version Control (Git)</li>
+                        <li>Cloudinary Integration</li>
+                        <li>VS Code & Development Tools</li>
+                        <li>Analytics Platforms</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">🔬</div>
+                        <h3>Research & Professional</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li>Urban Ecology Analysis</li>
+                        <li>Biodiversity Assessment</li>
+                        <li>Research Documentation</li>
+                        <li>Data Collection Protocols</li>
+                        <li>Scientific Project Management</li>
+                        <li>Technical Documentation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="tab-content">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('logo.png')"></div>
+                    <div class="project-content">
+                        <h3>OneStone Avian Fatality Tracker</h3>
+                        <p>Interactive GIS platform tracking avian mortality across the DMV area, featuring real-time data collection, advanced filtering, and comprehensive analytics.</p>
+                        <div class="project-tech">
+                            <span>Leaflet.js</span>
+                            <span>Firebase</span>
+                            <span>JavaScript</span>
+                            <span>Chart.js</span>
+                            <span>GeoJSON</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="projects/one-stone-bird-map.html" class="project-link">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('LILLOGO.png')"></div>
+                    <div class="project-content">
+                        <h3>Fairfax County Urban Biodiversity Dashboard</h3>
+                        <p>Interactive dashboard analyzing and visualizing urban biodiversity patterns across Fairfax County, featuring real-time data integration and environmental metrics tracking.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>D3.js</span>
+                            <span>GIS</span>
+                            <span>JavaScript</span>
+                            <span>APIs</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="projects/urban-biodiversity-dashboard.html" class="project-link">View Details</a>
+                            <a href="https://github.com/jandreanalytics/FFX-County-Urban-Wildlife-Dashboard-" class="github-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="tab-content">
+            <h2>Experience</h2>
+            <div class="timeline">
+                <div class="timeline-end-date">Present</div>
+                <div class="timeline-start-date">August 2018</div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Data Visualization Developer</h3>
+                        <h4>Independent Projects</h4>
+                        <p class="timeline-date">2023 - Present</p>
+                        <ul class="experience-list">
+                            <li>Developed OneStone Avian Fatality Tracker, a GIS-based platform managing 5,000+ data points</li>
+                            <li>Created Fairfax County Urban Biodiversity Dashboard using Python and D3.js</li>
+                            <li>Implemented real-time data processing and visualization systems</li>
+                            <li>Designed automated data collection and validation pipelines</li>
+                            <li>Built interactive mapping solutions using Leaflet.js and custom clustering algorithms</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Digital Business Analytics</h3>
+                        <h4>Self-Employed</h4>
+                        <p class="timeline-date">January 2020 - Present</p>
+                        <ul class="experience-list">
+                            <li>Developed custom Excel-based business management system reducing operational overhead by 85%</li>
+                            <li>Created and maintained comprehensive database using advanced Excel functions and Power Query</li>
+                            <li>Implemented data-driven decision making resulting in 30% year-over-year growth</li>
+                            <li>Designed automated systems for tracking and analyzing business metrics</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Independent Research Assistant</h3>
+                        <h4>George Mason University</h4>
+                        <p class="timeline-date">January 2021 - 2023</p>
+                        <ul class="experience-list">
+                            <li>Conducted independent botanical research utilizing university herbarium facilities</li>
+                            <li>Extracted and digitized data from >4000 North American herbarium specimens</li>
+                            <li>Collaborated with peer researchers to analyze ecological patterns</li>
+                            <li>Developed standardized protocols for specimen annotation and digitization</li>
+                            <li>Research manuscript in progress, temporarily paused pending additional data analysis</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Education</h3>
+                        <h4>George Mason University</h4>
+                        <p class="timeline-date">August 2018 - May 2022</p>
+                        <ul class="experience-list">
+                            <li>Bachelor of Science - Biology, General</li>
+                            <li>Focus on data analysis and ecological research methods</li>
+                            <li>Developed strong foundation in statistical analysis and research methodology</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="tab-content">
+            <div class="contact-header">
+                <h2>Get in Touch</h2>
+            </div>
+            <div class="contact-wrapper">
+                <div class="availability-note">
+                    <span class="asterisk">*</span> Currently seeking remote opportunities in data visualization and environmental analytics
+                </div>
+                <form class="contact-form" action="https://formspree.io/f/xqaazbno" method="POST" accept="application/json">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONE STONE BIRD MAP - Portfolio Project</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../project.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body class="project-page">
+    <div id="particles-js" style="position: absolute; z-index: 0;"></div>
+    <nav>
+        <div class="nav-content">
+            <a href="../index.html" class="back-button">← Back to Portfolio</a>
+        </div>
+    </nav>
+
+    <div class="content-guide">
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#showcase">Interface</a></li>
+            <li><a href="#architecture">Architecture</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#technical">Technical</a></li>
+            <li><a href="#challenges">Challenges</a></li>
+            <li><a href="#credits">Credits</a></li>
+        </ul>
+    </div>
+
+    <main class="project-wrapper">
+        <header class="project-header">
+            <div class="project-logo-container">
+                <img src="../logo.png" alt="One Stone Bird Map Logo" class="project-logo">
+            </div>
+            <div class="project-title">
+                <h1>ONESTONE BIRD MAP</h1>
+            </div>
+            <div class="project-tags">
+                <span class="nature-tag">Leaflet.js</span>
+                <span class="nature-tag">Firebase</span>
+                <span class="nature-tag">Chart.js</span>
+                <span class="nature-tag">Cloudinary</span>
+                <span class="nature-tag">Wikipedia API</span>
+                <span class="nature-tag">Google Geocoding</span>
+                <span class="nature-tag">Real-time Data</span>
+                <span class="nature-tag">GIS</span>
+            </div>
+            <div class="live-site-link" style="position: relative; z-index: 1;">
+                <a href="https://onestonebirdmap.xyz" class="primary-link" target="_blank" rel="noopener noreferrer">View Live Project</a>
+                <!-- Removed GitHub source code link -->
+            </div>
+        </header>
+
+        <section id="overview" class="project-overview project-section">
+            <h2>Project Overview</h2>
+            <p>The ONE STONE BIRD MAP was developed to shed light on the underreported issue of avian mortality in urban areas, particularly from window collisions and outdoor cats. By geographically visualizing these incidents, the project transforms abstract statistics into a tangible representation of their impact, making the issue more accessible and compelling to the general public. This approach fosters awareness, informs conservation efforts, and highlights the need for action to mitigate human-driven threats to bird populations in the DMV region.</p>
+            
+            <div class="project-stats">
+                <div class="stat">
+                    <h4>Architecture</h4>
+                    <p>Firebase Backend<br>Leaflet.js Maps<br>Chart.js Analytics</p>
+                </div>
+                <div class="stat">
+                    <h4>Core Features</h4>
+                    <p>Real-time Updates<br>Data Clustering<br>Interactive Filtering</p>
+                </div>
+                <div class="stat">
+                    <h4>Analytics</h4>
+                    <p>Species Tracking<br>Seasonal Patterns<br>Location Analysis</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="showcase" class="project-showcase project-section">
+            <h2>Data Analysis Interface</h2>
+            <div class="interface-details">
+                <div class="interface-card map-interface">
+                    <h3>Interactive Map View</h3>
+                    <div class="analytics-content">
+                        <p>Dynamic geospatial visualization of 5,461 documented incidents with smart clustering system:</p>
+                        <div class="metrics-grid">
+                            <div class="metric-group">
+                                <h4>Cluster Types</h4>
+                                <ul class="cluster-info">
+                                    <li class="yellow">Yellow: Minimal incident areas</li>
+                                    <li class="orange">Orange: Growing concern zones</li>
+                                    <li class="red">Red: High-frequency locations</li>
+                                </ul>
+                            </div>
+                            <div class="metric-group">
+                                <h4>Interactive Features</h4>
+                                <ul>
+                                    <li>Dynamic cluster expansion on zoom</li>
+                                    <li>Consolidated location markers</li>
+                                    <li>Hover previews for quick info</li>
+                                    <li>Click for detailed incident view</li>
+                                </ul>
+                            </div>
+                            <div class="metric-group">
+                                <h4>Incident Details</h4>
+                                <ul>
+                                    <li>Date and time stamps</li>
+                                    <li>Fatality cause classification</li>
+                                    <li>Data source and verification</li>
+                                    <li>Precise location data</li>
+                                    <li>Incident photographs</li>
+                                </ul>
+                            </div>
+                            <div class="metric-group">
+                                <h4>Filter Controls</h4>
+                                <ul>
+                                    <li>Date range selection</li>
+                                    <li>Incident type filtering</li>
+                                    <li>Species-specific views</li>
+                                    <li>Location-based filtering</li>
+                                </ul>
+                            </div>
+                            <div class="metric-group">
+                                <h4>Data Export</h4>
+                                <ul>
+                                    <li>CSV format download</li>
+                                    <li>GeoJSON format export</li>
+                                    <li>Filter-aware exports</li>
+                                    <li>Full dataset access</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="interface-card analytics">
+                    <h3>Analytics Dashboard</h3>
+                    <div class="analytics-content">
+                        <p>Real-time data visualization platform featuring:</p>
+                        <div class="metrics-grid">
+                            <div class="metric-group">
+                                <h4>Filter Controls</h4>
+                                <ul>
+                                    <li>Date range selection</li>
+                                    <li>State-level filtering</li>
+                                    <li>Species categorization</li>
+                                    <li>Incident type classification</li>
+                                </ul>
+                            </div>
+                            <div class="metric-group">
+                                <h4>Temporal Analysis</h4>
+                                <ul>
+                                    <li>Monthly incident distribution</li>
+                                    <li>Seasonal patterns</li>
+                                    <li>Year-over-year trends (2014-present)</li>
+                                    <li>Day-of-week frequency</li>
+                                </ul>
+                            </div>
+                            <div class="metric-group">
+                                <h4>Dynamic Visualizations</h4>
+                                <ul>
+                                    <li>Species-cause correlations</li>
+                                    <li>High-impact buildings</li>
+                                    <li>Critical area analysis</li>
+                                    <li>Building height distribution</li>
+                                </ul>
+                            </div>
+                            <div class="metric-group">
+                                <h4>Data Intelligence</h4>
+                                <ul>
+                                    <li>Cached data management</li>
+                                    <li>Smart building recognition</li>
+                                    <li>Wikipedia species integration</li>
+                                    <li>Location type classification</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="interface-card map-interface">
+                    <h3>Data Statistics</h3>
+                    <div class="analytics-content">
+                        <p>Currently tracking 5,461 incidents with advanced categorization:</p>
+                        <div class="metrics-grid">
+                            <div class="metric-group">
+                                <h4>Export Capabilities</h4>
+                                <ul>
+                                    <li>Full dataset access</li>
+                                    <li>Filter-aware exports</li>
+                                    <li>Map view exports</li>
+                                    <li>Multiple format support</li>
+                                </ul>
+                            </div>
+                            <div class="metric-group">
+                                <h4>Cause Categories</h4>
+                                <ul>
+                                    <li>Structural Collisions</li>
+                                    <li>Cat Predation</li>
+                                    <li>Wild Predation</li>
+                                    <li>Other Incidents</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="architecture" class="architecture-section project-section">
+            <h2 class="section-title">System Architecture</h2>
+            <div class="architecture-details">
+                <div class="arch-component">
+                    <h3>Frontend Layer</h3>
+                    <ul class="component-list">
+                        <li><strong>Core:</strong> JavaScript ES6+, HTML5, CSS3</li>
+                        <li><strong>Mapping:</strong> Leaflet.js with custom clustering</li>
+                        <li><strong>Analytics:</strong> Chart.js for data visualization</li>
+                        <li><strong>Performance:</strong> Multi-layer caching system</li>
+                    </ul>
+                </div>
+
+                <div class="arch-component">
+                    <h3>Backend Services</h3>
+                    <ul class="component-list">
+                        <li><strong>Database:</strong> Firebase Realtime Database</li>
+                        <li><strong>Storage:</strong> Cloudinary image management</li>
+                        <li><strong>Security:</strong> Data validation & access control</li>
+                        <li><strong>Cache:</strong> Performance optimization layer</li>
+                    </ul>
+                </div>
+
+                <div class="arch-component">
+                    <h3>Data Processing</h3>
+                    <ul class="component-list">
+                        <li><strong>Geospatial:</strong> Coordinate validation & processing</li>
+                        <li><strong>Analysis:</strong> Building recognition algorithms</li>
+                        <li><strong>Integration:</strong> Multiple API endpoints</li>
+                        <li><strong>Export:</strong> GeoJSON & CSV capabilities</li>
+                    </ul>
+                </div>
+
+                <div class="arch-component">
+                    <h3>Data Processing Layer</h3>
+                    <ul class="component-list">
+                        <li><strong>Clustering:</strong> Custom marker clustering with dynamic expansion</li>
+                        <li><strong>Caching:</strong> Client-side data caching for performance</li>
+                        <li><strong>Fuzzy Matching:</strong> Intelligent cause categorization system</li>
+                        <li><strong>State Management:</strong> Filter state preservation and recovery</li>
+                    </ul>
+                </div>
+
+                <div class="arch-component">
+                    <h3>Smart Data Management</h3>
+                    <ul class="component-list">
+                        <li><strong>Multi-layer Caching:</strong> Separate caching for building data and bird incidents</li>
+                        <li><strong>Fuzzy Matching:</strong> Intelligent cause categorization with pattern recognition</li>
+                        <li><strong>State Detection:</strong> Automatic geofencing for MD, VA, and DC regions</li>
+                        <li><strong>Building Recognition:</strong> Smart address and building name mapping system</li>
+                    </ul>
+                </div>
+
+                <div class="arch-component">
+                    <h3>Integration Features</h3>
+                    <ul class="component-list">
+                        <li><strong>Species Info:</strong> Real-time Wikipedia data integration</li>
+                        <li><strong>Image Storage:</strong> Cloudinary integration for incident photos</li>
+                        <li><strong>Location Services:</strong> Google Geocoding for address validation</li>
+                        <li><strong>Data Export:</strong> Context-aware CSV and GeoJSON exports</li>
+                    </ul>
+                </div>
+
+                <div class="arch-component">
+                    <h3>Performance Features</h3>
+                    <ul class="component-list">
+                        <li><strong>Progressive Loading:</strong> Lazy-loaded charts and visualizations</li>
+                        <li><strong>State Management:</strong> Filter state preservation and recovery</li>
+                        <li><strong>Error Handling:</strong> Graceful degradation with fallbacks</li>
+                        <li><strong>Mobile Optimization:</strong> Adaptive clustering and UI components</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="data-flow">
+                <h3>Data Flow</h3>
+                <div class="flow-steps">
+                    <div class="flow-step">
+                        <span class="step-number">1</span>
+                        <h4>Data Collection</h4>
+                        <p>User submissions through interactive form with location detection and image upload capabilities</p>
+                    </div>
+                    <div class="flow-step">
+                        <span class="step-number">2</span>
+                        <h4>Processing & Storage</h4>
+                        <p>Real-time validation, normalization, and storage in Firebase with Cloudinary integration</p>
+                    </div>
+                    <div class="flow-step">
+                        <span class="step-number">3</span>
+                        <h4>Analysis & Visualization</h4>
+                        <p>Dynamic data processing with custom clustering and comprehensive analytics dashboard</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="core-features project-section">
+            <h2>Core Features</h2>
+            <div class="features-grid">
+                <div class="feature-card mapping">
+                    <h3>Interactive Mapping System</h3>
+                    <ul class="feature-list">
+                        <li>Custom-built marker clustering for efficient data visualization</li>
+                        <li>Real-time geospatial data processing</li>
+                        <li>Dynamic heatmap generation</li>
+                        <li>Location-aware reporting system</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card analysis">
+                    <h3>Data Analysis Dashboard</h3>
+                    <ul class="feature-list">
+                        <li>Multi-dimensional data visualization</li>
+                        <li>Species-specific trend analysis</li>
+                        <li>Building impact correlation studies</li>
+                        <li>Seasonal pattern recognition</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card education">
+                    <h3>Education Platform</h3>
+                    <ul class="feature-list">
+                        <li>Bird safety guidelines</li>
+                        <li>Emergency response protocols</li>
+                        <li>Building recommendations</li>
+                        <li>Conservation resources</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="technical" class="technical-deep-dive project-section">
+            <h2>Technical Deep Dive</h2>
+            <div class="deep-dive-grid">
+                <div class="deep-dive-card">
+                    <h3>Intelligent Caching System</h3>
+                    <ul class="feature-list">
+                        <li>Dual-layer caching with separate expiration for building and incident data</li>
+                        <li>Optimized localStorage management with timestamp validation</li>
+                        <li>Selective data persistence based on view requirements</li>
+                        <li>Automatic cache invalidation for stale data</li>
+                    </ul>
+                </div>
+
+                <div class="deep-dive-card">
+                    <h3>Fuzzy Match Algorithm</h3>
+                    <ul class="feature-list">
+                        <li>Smart cause categorization with pattern recognition</li>
+                        <li>Automated incident classification system</li>
+                        <li>Multi-keyword matching for accurate categorization</li>
+                        <li>Fallback categorization for edge cases</li>
+                    </ul>
+                </div>
+
+                <div class="deep-dive-card">
+                    <h3>Progressive Loading</h3>
+                    <ul class="feature-list">
+                        <li>IntersectionObserver for lazy-loaded charts</li>
+                        <li>Optimized marker clustering for large datasets</li>
+                        <li>Debounced filter operations for performance</li>
+                        <li>State preservation during view updates</li>
+                    </ul>
+                </div>
+
+                <div class="deep-dive-card">
+                    <h3>Smart Building Recognition</h3>
+                    <ul class="feature-list">
+                        <li>Coordinate-based building identification</li>
+                        <li>Geofencing for DMV region classification</li>
+                        <li>Fallback naming system for unknown locations</li>
+                        <li>Building height estimation algorithms</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="challenges" class="technical-challenges project-section">
+            <h2>Technical Challenges & Solutions</h2>
+            <div class="challenges-grid">
+                <div class="challenge-card">
+                    <div class="challenge-header">
+                        <h3>Performance Optimization</h3>
+                    </div>
+                    <div class="challenge-content">
+                        <p class="problem">Large dataset causing performance issues on mobile devices</p>
+                        <div class="solution">
+                            <h4>Solution Implemented:</h4>
+                            <ul>
+                                <li>Hybrid caching system and data aggregation</li>
+                                <li>Reduced load times by 60%</li>
+                                <li>Optimized memory usage for mobile devices</li>
+                                <li>Implemented progressive loading</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="challenge-card">
+                    <div class="challenge-header">
+                        <h3>Geospatial Accuracy</h3>
+                    </div>
+                    <div class="challenge-content">
+                        <p class="problem">Inconsistent location data affecting analysis accuracy</p>
+                        <div class="solution">
+                            <h4>Solution Implemented:</h4>
+                            <ul>
+                                <li>Implemented geofencing</li>
+                                <li>Created building recognition algorithm</li>
+                                <li>Built data cleaning pipeline</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="challenge-card">
+                    <div class="challenge-header">
+                        <h3>Cross-Platform Compatibility</h3>
+                    </div>
+                    <div class="challenge-content">
+                        <p class="problem">Inconsistent user experience across devices</p>
+                        <div class="solution">
+                            <h4>Solution Implemented:</h4>
+                            <ul>
+                                <li>Developed adaptive UI components</li>
+                                <li>Created mobile-specific controls</li>
+                                <li>Optimized touch interactions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="credits" class="acknowledgements project-section">
+            <h2>Credits</h2>
+            <div class="acknowledgement-card">
+                <p>This project would not be possible without the dedicated efforts of various organizations and individuals. Special thanks to City Wildlife, Inc. for providing invaluable data on avian mortality and rehabilitation efforts. Their collaboration has been instrumental in shaping the project's scope and impact.</p>
+                
+                <p>We extend our gratitude to Dr. Daniel Hanley at George Mason University (GMU) for his guidance and expertise in avian research. His insights have significantly contributed to the project's scientific foundation. Additionally, Dr. Rebecca Forkner's support and expertise have been invaluable throughout the development process.</p>
+                
+                <p>The project utilizes research-grade data from iNaturalist, whose contributions to biodiversity data collection are deeply appreciated. Efforts are ongoing to engage with rehabilitation organizations like City Wildlife for data sharing and to further enhance the project's scope and impact.</p>
+
+                <p>Data for this project is sourced from iNaturalist, a joint initiative by the California Academy of Sciences and the National Geographic Society. The platform's commitment to open data and community science has been instrumental in making urban wildlife research more accessible to everyone.</p>
+            </div>
+        </section>
+    </main>
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 30,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: '#3498db'
+                },
+                shape: {
+                    type: 'circle'
+                },
+                opacity: {
+                    value: 0.3,
+                    anim: {
+                        enable: false
+                    }
+                },
+                size: {
+                    value: 2,
+                    anim: {
+                        enable: false
+                    }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: '#3498db',
+                    opacity: 0.2,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 0.8,
+                    direction: 'none',
+                    out_mode: 'bounce',
+                    bounce: true,
+                    attract: {
+                        enable: false
+                    }
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: 'grab'
+                    },
+                    onclick: {
+                        enable: false
+                    },
+                    resize: true
+                },
+                modes: {
+                    grab: {
+                        distance: 150,
+                        line_linked: {
+                            opacity: 0.3
+                        }
+                    }
+                }
+            },
+            retina_detect: false
+        });
+    </script>
+</body>
+</html>

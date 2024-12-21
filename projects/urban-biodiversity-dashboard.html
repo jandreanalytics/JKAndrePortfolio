@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Biodiversity Dashboard - Portfolio Project</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../project.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body class="project-page">
+    <div id="particles-js" style="position: absolute; z-index: 0;"></div>
+    <nav>
+        <div class="nav-content">
+            <a href="../index.html" class="back-button">← Back to Portfolio</a>
+        </div>
+    </nav>
+
+    <div class="content-guide">
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#showcase">Interface</a></li>
+            <li><a href="#architecture">Architecture</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#data-processing">Data Processing</a></li>
+            <li><a href="#analytics">Analytics</a></li>
+            <li><a href="#technical">Technical</a></li>
+            <li><a href="#challenges">Challenges</a></li>
+            <li><a href="#credits">Credits</a></li>
+        </ul>
+    </div>
+
+    <main class="project-wrapper">
+        <header class="project-header">
+            <div class="project-logo-container">
+                <img src="../LILLOGO.png" alt="Biodiversity Dashboard Logo" class="project-logo">
+            </div>
+            <div class="project-title">
+                <h1>FFX County Urban Biodiversity Dashboard</h1>
+            </div>
+            <div class="project-tags">
+                <span class="nature-tag">Python</span>
+                <span class="nature-tag">D3.js</span>
+                <span class="nature-tag">Data Analysis</span>
+                <span class="nature-tag">GIS</span>
+                <span class="nature-tag">Environmental Science</span>
+                <span class="nature-tag">Machine Learning</span>
+                <span class="nature-tag">API Integration</span>
+            </div>
+            <div class="live-site-link" style="position: relative; z-index: 1;">
+                <a href="https://jandreanalytics.github.io/FFX-County-Urban-Wildlife-Dashboard-/" class="primary-link" target="_blank" rel="noopener noreferrer">View Live Project</a>
+                <a href="https://github.com/jandreanalytics/FFX-County-Urban-Wildlife-Dashboard-" class="source-code-link" title="View Source Code" target="_blank" rel="noopener noreferrer"><span class="code-icon">&lt;/&gt;</span></a>
+            </div>
+        </header>
+
+        <section class="project-overview project-section" id="overview">
+            <h2 class="section-title">Project Overview</h2>
+            <p>The Fairfax County Urban Biodiversity Dashboard was developed as a personal initiative alongside my freelance work, driven by my interest in urban wildlife patterns and data visualization. This project transforms iNaturalist observation data into actionable insights, demonstrating how public datasets can be leveraged to understand local biodiversity patterns.</p>
+            
+            <br>
+            
+            <p>Using the iNaturalist API and modern web technologies, this platform creates an interactive window into Fairfax County's urban ecosystem, helping researchers, conservationists, and the public track and understand wildlife patterns, habitat health, and biodiversity trends in our developing urban landscape.</p>
+            
+            <div class="project-stats">
+                <div class="stat">
+                    <h4>Data Source</h4>
+                    <p>iNaturalist API<br>Research Grade Data<br>Community Science</p>
+                </div>
+                <div class="stat">
+                    <h4>Core Features</h4>
+                    <p>Species Tracking<br>Habitat Analysis<br>Population Trends</p>
+                </div>
+                <div class="stat">
+                    <h4>Impact Areas</h4>
+                    <p>Urban Planning<br>Conservation<br>Research Support</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-showcase project-section" id="showcase">
+            <h2 class="section-title">Interactive Interface</h2>
+            <div class="interface-details">
+                <div class="interface-card map-interface">
+                    <h3>Map Visualization System</h3>
+                    <div class="analytics-content">
+                        <p>Dynamic wildlife tracking system with smart clustering and filtering:</p>
+                        <div class="metrics-grid">
+                            <div class="metric-group">
+                                <h4>Map Features</h4>
+                                <ul>
+                                    <li>Taxa-based color coding</li>
+                                    <li>Dynamic marker clustering</li>
+                                    <li>Emoji-based species indicators</li>
+                                    <li>Interactive sighting details</li>
+                                </ul>
+                            </div>
+                            <div class="metric-group">
+                                <h4>Filter Controls</h4>
+                                <ul>
+                                    <li>Year and season selection</li>
+                                    <li>Species-specific filtering</li>
+                                    <li>Conservation status filters</li>
+                                    <li>Geographic boundary filtering</li>
+                                </ul>
+                            </div>
+                            <div class="metric-group">
+                                <h4>Data Layers</h4>
+                                <ul>
+                                    <li>Terrain visualization</li>
+                                    <li>Satellite imagery</li>
+                                    <li>Protected areas overlay</li>
+                                    <li>Species density heatmaps</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="interface-card analytics">
+                    <h3>Species Analytics Dashboard</h3>
+                    <div class="analytics-content">
+                        <div class="metrics-grid">
+                            <div class="metric-group">
+                                <h4>Wildlife Statistics</h4>
+                                <ul>
+                                    <li>Most reported species rankings</li>
+                                    <li>Seasonal distribution patterns</li>
+                                    <li>Species group proportions</li>
+                                    <li>Monthly & yearly trends</li>
+                                </ul>
+                            </div>
+                            <div class="metric-group">
+                                <h4>Species Details</h4>
+                                <ul>
+                                    <li>Total observation counts</li>
+                                    <li>Monthly activity patterns</li>
+                                    <li>Annual observation trends</li>
+                                    <li>Recent sighting timeline</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="interface-card">
+                    <h3>Resource Integration</h3>
+                    <div class="analytics-content">
+                        <div class="metrics-grid">
+                            <div class="metric-group">
+                                <h4>Data Sources</h4>
+                                <ul>
+                                    <li>iNaturalist observations</li>
+                                    <li>USFWS protected species</li>
+                                    <li>County invasive species</li>
+                                    <li>Pollinator databases</li>
+                                </ul>
+                            </div>
+                            <div class="metric-group">
+                                <h4>Geographic Data</h4>
+                                <ul>
+                                    <li>County boundary datasets</li>
+                                    <li>Protected area mapping</li>
+                                    <li>Habitat zone tracking</li>
+                                    <li>Urban development overlay</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="architecture-section project-section" id="architecture">
+            <h2 class="section-title">System Architecture</h2>
+            <div class="architecture-details">
+                <div class="arch-component">
+                    <h3>Core Technologies</h3>
+                    <ul class="component-list">
+                        <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript ES6+</li>
+                        <li><strong>Mapping:</strong> Leaflet.js with custom clustering</li>
+                        <li><strong>Data Viz:</strong> Chart.js, D3.js</li>
+                        <li><strong>Data Processing:</strong> Python for data preparation</li>
+                    </ul>
+                </div>
+
+                <div class="arch-component">
+                    <h3>Key Features</h3>
+                    <ul class="component-list">
+                        <li><strong>Filtering:</strong> Multi-level taxonomic classification</li>
+                        <li><strong>Analysis:</strong> Temporal and spatial pattern detection</li>
+                        <li><strong>Integration:</strong> iNaturalist data processing</li>
+                        <li><strong>Visualization:</strong> Custom marker clustering system</li>
+                    </ul>
+                </div>
+
+                <div class="arch-component">
+                    <h3>Data Management</h3>
+                    <ul class="component-list">
+                        <li><strong>Cache System:</strong> Client-side data optimization</li>
+                        <li><strong>Filtering:</strong> Real-time data processing</li>
+                        <li><strong>Search:</strong> Species-based filtering system</li>
+                        <li><strong>Updates:</strong> Regular data refresh cycles</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="data-flow">
+                <h3>Data Flow</h3>
+                <div class="flow-steps">
+                    <div class="flow-step">
+                        <span class="step-number">1</span>
+                        <h4>Data Collection</h4>
+                        <p>Automated data gathering from multiple environmental monitoring sources</p>
+                    </div>
+                    <div class="flow-step">
+                        <span class="step-number">2</span>
+                        <h4>Processing & Analysis</h4>
+                        <p>Machine learning-based species classification and pattern detection</p>
+                    </div>
+                    <div class="flow-step">
+                        <span class="step-number">3</span>
+                        <h4>Visualization & Reporting</h4>
+                        <p>Interactive data visualization and comprehensive environmental reporting</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="core-features project-section" id="features">
+            <h2>Core Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Data Processing</h3>
+                    <ul class="feature-list">
+                        <li>Real-time taxonomic classification</li>
+                        <li>Multi-source data integration</li>
+                        <li>Automated data validation</li>
+                        <li>Custom filtering algorithms</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Visualization Engine</h3>
+                    <ul class="feature-list">
+                        <li>Interactive charts and graphs</li>
+                        <li>Species distribution maps</li>
+                        <li>Population trend analysis</li>
+                        <li>Environmental metrics tracking</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section" id="data-processing">
+            <h2>Data Processing Pipeline</h2>
+            <div class="deep-dive-grid">
+                <div class="deep-dive-card">
+                    <h3>iNaturalist Integration</h3>
+                    <ul class="feature-list">
+                        <li>Research-grade observations filtering</li>
+                        <li>Automated daily data sync</li>
+                        <li>Geographic boundary validation</li>
+                        <li>Data quality verification</li>
+                    </ul>
+                </div>
+                
+                <div class="deep-dive-card">
+                    <h3>Real-time Processing</h3>
+                    <ul class="feature-list">
+                        <li>Dynamic taxonomic classification</li>
+                        <li>Species verification system</li>
+                        <li>Location data normalization</li>
+                        <li>Observation metadata parsing</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="analytics-section project-section" id="analytics">
+            <h2 class="section-title">Data Visualization Suite</h2>
+            <div class="interface-details">
+                <div class="interface-card">
+                    <h3>Overview Statistics</h3>
+                    <div class="analytics-content">
+                        <p>Comprehensive wildlife statistics with multiple visualization types:</p>
+                        <div class="metrics-grid">
+                            <div class="metric-group">
+                                <h4>Species Distribution</h4>
+                                <ul>
+                                    <li>Bar chart for most reported species</li>
+                                    <li>Pie chart for species group ratios</li>
+                                    <li>Heatmap for location density</li>
+                                    <li>Population trend lines</li>
+                                </ul>
+                            </div>
+                            <div class="metric-group">
+                                <h4>Temporal Analysis</h4>
+                                <ul>
+                                    <li>Seasonal radar charts</li>
+                                    <li>Monthly activity histograms</li>
+                                    <li>Year-over-year line graphs</li>
+                                    <li>Time-of-day activity plots</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="interface-card">
+                    <h3>Species-Specific Analytics</h3>
+                    <div class="analytics-content">
+                        <p>Detailed individual species tracking and analysis:</p>
+                        <div class="metrics-grid">
+                            <div class="metric-group">
+                                <h4>Activity Patterns</h4>
+                                <ul>
+                                    <li>Monthly sighting frequency</li>
+                                    <li>Seasonal behavior tracking</li>
+                                    <li>Location preference maps</li>
+                                    <li>Habitat correlation charts</li>
+                                </ul>
+                            </div>
+                            <div class="metric-group">
+                                <h4>Population Metrics</h4>
+                                <ul>
+                                    <li>Total observation counts</li>
+                                    <li>Population trend analysis</li>
+                                    <li>Geographic distribution</li>
+                                    <li>Recent sighting timeline</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="interface-card">
+                    <h3>Interactive Features</h3>
+                    <div class="analytics-content">
+                        <div class="metrics-grid">
+                            <div class="metric-group">
+                                <h4>Data Filtering</h4>
+                                <ul>
+                                    <li>Date range selectors</li>
+                                    <li>Species group filters</li>
+                                    <li>Location-based filtering</li>
+                                    <li>Behavior pattern filters</li>
+                                </ul>
+                            </div>
+                            <div class="metric-group">
+                                <h4>Visualization Controls</h4>
+                                <ul>
+                                    <li>Chart type toggles</li>
+                                    <li>Data grouping options</li>
+                                    <li>Dynamic scale adjustment</li>
+                                    <li>Export capabilities</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="technical-deep-dive project-section" id="technical">
+            <h2>Technical Implementation</h2>
+            <div class="deep-dive-grid">
+                <div class="deep-dive-card">
+                    <h3>Data Pipeline</h3>
+                    <ul class="feature-list">
+                        <li>Python-based data processing</li>
+                        <li>Automated data cleaning workflows</li>
+                        <li>Species classification algorithms</li>
+                        <li>iNaturalist API integration</li>
+                    </ul>
+                </div>
+
+                <div class="deep-dive-card">
+                    <h3>Performance Optimization</h3>
+                    <ul class="feature-list">
+                        <li>Client-side caching system</li>
+                        <li>Efficient data structures</li>
+                        <li>Lazy loading implementation</li>
+                        <li>Optimized query patterns</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="technical-challenges project-section" id="challenges">
+            <h2>Technical Challenges</h2>
+            <div class="challenges-grid">
+                <div class="challenge-card">
+                    <div class="challenge-header">
+                        <h3>Data Integration</h3>
+                    </div>
+                    <div class="challenge-content">
+                        <p class="problem">Complex data normalization across multiple sources</p>
+                        <div class="solution">
+                            <h4>Solution:</h4>
+                            <ul>
+                                <li>Custom ETL pipeline development</li>
+                                <li>Automated data validation system</li>
+                                <li>Unified taxonomy classification</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="challenge-card">
+                    <div class="challenge-header">
+                        <h3>Performance</h3>
+                    </div>
+                    <div class="challenge-content">
+                        <p class="problem">Large dataset visualization and filtering</p>
+                        <div class="solution">
+                            <h4>Solution:</h4>
+                            <ul>
+                                <li>Implemented data pagination</li>
+                                <li>Optimized search algorithms</li>
+                                <li>Added client-side caching</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="acknowledgements project-section" id="credits">
+            <h2>Credits</h2>
+            <div class="acknowledgement-card">
+                <p>This project would not be possible without the dedicated community of citizen scientists contributing their observations to iNaturalist. Their daily efforts to document and share wildlife sightings form the foundation of this visualization platform.</p>
+                
+                <p>Special recognition goes to the diverse wildlife of Fairfax County - from the smallest pollinator to the largest predator - whose presence enriches our urban ecosystem and reminds us of the importance of conservation in our developing landscapes.</p>
+                
+                <p>The project utilizes protected species listings from the U.S. Fish and Wildlife Service's ECOS database, while invasive species data is sourced from Fairfax County Public Works, the Virginia Invasive Species Council, and the Virginia Department of Conservation and Recreation. Pollinator identification was made possible through careful filtering of known pollinating species genera, and the geographic analysis relies on the Fairfax County Boundary dataset for precise spatial filtering.</p>
+
+                <p>Data for this project is sourced from iNaturalist, a joint initiative by the California Academy of Sciences and the National Geographic Society. The platform's commitment to open data and community science has been instrumental in making urban wildlife research more accessible to everyone.</p>
+            </div>
+        </section>
+    </main>
+    
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 30,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: '#3498db'
+                },
+                shape: {
+                    type: 'circle'
+                },
+                opacity: {
+                    value: 0.3,
+                    random: false,
+                    anim: {
+                        enable: false
+                    }
+                },
+                size: {
+                    value: 2,
+                    random: false,
+                    anim: {
+                        enable: false
+                    }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: '#3498db',
+                    opacity: 0.2,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 0.8,
+                    direction: 'none',
+                    random: false,
+                    straight: false,
+                    out_mode: 'bounce',
+                    bounce: true,
+                    attract: {
+                        enable: false
+                    }
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: 'grab'
+                    },
+                    onclick: {
+                        enable: false
+                    },
+                    resize: true
+                },
+                modes: {
+                    grab: {
+                        distance: 150,
+                        line_linked: {
+                            opacity: 0.3
+                        }
+                    }
+                }
+            },
+            retina_detect: false
+        });
+    </script>
+</body>
+</html>
