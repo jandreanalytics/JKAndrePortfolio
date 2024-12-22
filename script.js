@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Add loading class to body after slight delay
+    setTimeout(() => {
+        document.body.classList.add('loaded');
+        document.querySelector('.content-wrapper').classList.add('loaded');
+    }, 100);
+
     particlesJS('particles-js', {
         particles: {
             number: {
@@ -72,23 +78,47 @@ document.addEventListener('DOMContentLoaded', function() {
         retina_detect: false       
     });
 
-    
-
-    
     const tabButtons = document.querySelectorAll('.tab-button');
     const tabContents = document.querySelectorAll('.tab-content');
 
     function switchTab(tabId) {
+        const currentTab = document.querySelector('.tab-content.active');
+        const newTab = document.getElementById(tabId);
+        
+        // Ensure new tab starts invisible
+        if (newTab) {
+            newTab.style.opacity = '0';
+            newTab.style.transform = 'translateY(20px)';
+        }
         
         tabButtons.forEach(button => button.classList.remove('active'));
-        tabContents.forEach(content => content.classList.remove('active'));
+        document.querySelector(`[data-tab="${tabId}"]`).classList.add('active');
 
-        
-        const selectedButton = document.querySelector(`[data-tab="${tabId}"]`);
-        const selectedContent = document.getElementById(tabId);
-        
-        selectedButton.classList.add('active');
-        selectedContent.classList.add('active');
+        if (currentTab) {
+            currentTab.style.opacity = '0';
+            currentTab.style.transform = 'translateY(20px)';
+            currentTab.style.pointerEvents = 'none';
+            
+            setTimeout(() => {
+                currentTab.classList.remove('active');
+                currentTab.style.visibility = 'hidden';
+                
+                newTab.style.visibility = 'visible';
+                newTab.classList.add('active');
+                void newTab.offsetWidth;
+                
+                newTab.style.opacity = '1';
+                newTab.style.transform = 'translateY(0)';
+                newTab.style.pointerEvents = 'auto';
+            }, 300);
+        } else {
+            newTab.style.visibility = 'visible';
+            newTab.classList.add('active');
+            void newTab.offsetWidth;
+            newTab.style.opacity = '1';
+            newTab.style.transform = 'translateY(0)';
+            newTab.style.pointerEvents = 'auto';
+        }
     }
 
     tabButtons.forEach(button => {
@@ -98,46 +128,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    
+    // Update navigation event listeners to fix project links
     document.querySelectorAll('nav a:not(.resume-nav-link)').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const section = document.querySelector(this.getAttribute('href'));
-            section.scrollIntoView({ behavior: 'smooth' });
+            // Only prevent default for navigation links
+            if (this.getAttribute('href').startsWith('#')) {
+                e.preventDefault();
+                const section = document.querySelector(this.getAttribute('href'));
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
         });
     });
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-    
-
-    
     const form = document.querySelector('.contact-form');
     form.addEventListener('submit', async function(e) {
         e.preventDefault();
@@ -174,16 +176,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 3000);
         }
     });
-
-    
-    
-    /*
-    const resumeLink = document.querySelector('.resume-nav-link');
-    if (resumeLink) {
-        resumeLink.addEventListener('click', function(e) {
-            
-            
-        });
-    }
-    */
 });

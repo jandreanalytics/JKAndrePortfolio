@@ -9,25 +9,23 @@
 	padding:0;
 	box-sizing:border-box
 }
-html, body {
-    min-height: 100vh;
-    height: 100%;
-}
 body{
 	font-family:Arial,sans-serif;
 	background:var(--background);
 	color:var(--text-color);
-	line-height:1.6
+	line-height:1.6;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+body.loaded {
+    opacity: 1;
 }
 #particles-js{
 	position:fixed;
-	top:0;
-	left:0;
 	width:100%;
-	height:100vh;
+	height:100%;
 	z-index:1;
-	pointer-events:none;
-    min-height: 100vh;
+    pointer-events: none; /* Add this line to allow clicks to pass through */
 }
 nav{
 	position:fixed;
@@ -62,7 +60,8 @@ nav a:hover{
 	font-size:1rem;
 	transition:all .3s;
 	position:relative;
-	opacity:.7
+	opacity:.7;
+	transition: opacity 0.3s ease, color 0.3s ease;
 }
 .tab-button::after{
 	content:'';
@@ -89,26 +88,36 @@ nav a:hover{
 	min-height:100vh;
 	display:flex;
 	align-items:center;
-	justify-content:center
+	justify-content:center;
+	animation: pageLoad 1s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.content-wrapper.loaded {
+    opacity: 1;
+    transform: translateY(0);
 }
 .tab-content{
 	display:none;
 	opacity:0;
 	transform:translateY(20px);
-	transition:opacity .6s ease,transform .6s ease;
+	transition:opacity .5s ease-in-out,transform .5s ease-in-out;
 	width:100%;
 	max-width:1200px;
 	margin:0 auto;
 	padding:2rem;
+	position:absolute;
 	visibility:hidden;
-	position:absolute
+	pointer-events:none;
 }
 .tab-content.active{
 	display:block;
 	opacity:1;
 	transform:translateY(0);
+	position:relative;
 	visibility:visible;
-	position:relative
+	pointer-events:auto;
 }
 section{
 	min-height:unset;
@@ -772,5 +781,15 @@ section{
 	.timeline::after{
 		left:30px;
 		transform:none
+}
+}
+@keyframes pageLoad{
+	0%{
+		opacity:0;
+		transform:translateY(20px)
+}
+	100%{
+		opacity:1;
+		transform:translateY(0)
 }
 }

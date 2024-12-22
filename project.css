@@ -34,7 +34,8 @@ html, body {
 }
 .project-header{
 	text-align:center;
-	margin-bottom:4rem
+	margin-bottom:4rem;
+    animation: fadeInUp 0.8s ease-out forwards;
 }
 .project-title{
 	margin-bottom:.5rem
@@ -383,7 +384,10 @@ a:focus,button:focus{
 	margin-bottom:4rem;
 	padding:2rem;
 	border-radius:12px;
-	scroll-margin-top:100px
+	scroll-margin-top:100px;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: calc(var(--delay, 0) * 0.2s);
 }
 .project-section h2{
 	font-size:2.2rem;
@@ -793,3 +797,23 @@ a:focus,button:focus{
     pointer-events: none;
     min-height: 100vh;
 }
+
+/* Add fade-in animations for project page elements */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#overview { --delay: 1; }
+#showcase { --delay: 2; }
+#architecture { --delay: 3; }
+#features { --delay: 4; }
+#technical { --delay: 5; }
+#challenges { --delay: 6; }
+#credits { --delay: 7; }
