@@ -9,6 +9,10 @@
 	padding:0;
 	box-sizing:border-box
 }
+html, body {
+    min-height: 100vh;
+    height: 100%;
+}
 body{
 	font-family:Arial,sans-serif;
 	background:var(--background);
@@ -17,9 +21,13 @@ body{
 }
 #particles-js{
 	position:fixed;
+	top:0;
+	left:0;
 	width:100%;
-	height:100%;
-	z-index:1
+	height:100vh;
+	z-index:1;
+	pointer-events:none;
+    min-height: 100vh;
 }
 nav{
 	position:fixed;
@@ -87,16 +95,20 @@ nav a:hover{
 	display:none;
 	opacity:0;
 	transform:translateY(20px);
-	transition:opacity .5s,transform .5s;
+	transition:opacity .6s ease,transform .6s ease;
 	width:100%;
 	max-width:1200px;
 	margin:0 auto;
-	padding:2rem
+	padding:2rem;
+	visibility:hidden;
+	position:absolute
 }
 .tab-content.active{
 	display:block;
 	opacity:1;
-	transform:translateY(0)
+	transform:translateY(0);
+	visibility:visible;
+	position:relative
 }
 section{
 	min-height:unset;
