@@ -1,9 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Add loading class to body after slight delay
-    setTimeout(() => {
-        document.body.classList.add('loaded');
-        document.querySelector('.content-wrapper').classList.add('loaded');
-    }, 100);
+    // Only add loading animation if not a project page
+    if (!document.body.classList.contains('project-page')) {
+        setTimeout(() => {
+            document.body.classList.add('loaded');
+            document.querySelector('.content-wrapper').classList.add('loaded');
+        }, 100);
+    } else {
+        // For project pages, ensure content is immediately visible
+        document.body.style.opacity = '1';
+    }
 
     particlesJS('particles-js', {
         particles: {

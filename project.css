@@ -25,12 +25,18 @@ html, body {
 }
 .project-page{
 	background:var(--background);
-	color:var(--text-color)
+	color:var(--text-color);
+    opacity: 1;
+    transition: none;
 }
 .project-wrapper{
 	max-width:1200px;
 	margin:0 auto;
-	padding:100px 2rem 2rem
+	padding:100px 2rem 2rem;
+    opacity: 1;
+    z-index: 10;
+    position: relative;
+    animation: fadeInUp 0.8s ease-out forwards;
 }
 .project-header{
 	text-align:center;
@@ -60,7 +66,9 @@ html, body {
 }
 .project-logo-container{
 	margin-bottom:0;
-	text-align:center
+	text-align:center;
+    position: relative;
+    z-index: 11;
 }
 .project-logo{
 	width:240px;
