@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - PPalytics</title>
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../project.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body class="project-page">
+    <div id="particles-js"></div>
+    <nav>
+        <div class="nav-content">
+            <a href="../index.html" class="back-button">← Back to Portfolio</a>
+        </div>
+    </nav>
+
+    <div class="content-guide">
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#showcase">Interface</a></li>
+            <li><a href="#architecture">Architecture</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#data-processing">Data Processing</a></li>
+            <li><a href="#analytics">Analytics</a></li>
+            <li><a href="#technical">Technical</a></li>
+            <li><a href="#challenges">Challenges</a></li>
+            <li><a href="#credits">Credits</a></li>
+        </ul>
+    </div>
+
+    <main class="project-wrapper">
+        <header class="project-header">
+            <div class="project-logo-container">
+                <img src="../ppalytics-logo.png" alt="PPalytics Logo" class="project-logo">
+            </div>
+            <div class="project-title">
+                <h1>PPalytics</h1>
+            </div>
+            <div class="project-tags">
+                <span>JavaScript</span>
+                <span>Chart.js</span>
+                <span>CSV Analysis</span>
+                <span>ML Patterns</span>
+                <span>Data Visualization</span>
+                <span>Financial Analytics</span>
+            </div>
+            <div class="live-site-link">
+                <a href="https://jandreanalytics.github.io/PPalytics/" class="primary-link" target="_blank" rel="noopener noreferrer">View Live Project</a>
+                <a href="https://github.com/jandreanalytics/PPalytics" class="source-code-link" title="View Source Code" target="_blank" rel="noopener noreferrer">
+                    <span class="code-icon">&lt;/&gt;</span>
+                </a>
+            </div>
+        </header>
+
+        <section class="project-overview project-section" id="overview">
+            <h2>Project Overview</h2>
+            <p>PPalytics is a powerful client-side web application that transforms PayPal transaction data into comprehensive business insights. Originally built as a personal tool, it evolved into a full-featured analytics platform that processes data entirely in the browser, ensuring complete privacy and security.</p>
+            
+            <div class="project-stats">
+                <div class="stat">
+                    <h4>Key Features</h4>
+                    <p>12 Interactive Charts<br>Smart Processing<br>Tax Preparation</p>
+                </div>
+                <div class="stat">
+                    <h4>Core Capabilities</h4>
+                    <p>Pattern Detection<br>Customer Analytics<br>Financial Trends</p>
+                </div>
+                <div class="stat">
+                    <h4>Privacy Focus</h4>
+                    <p>Client-side Only<br>No Data Storage<br>Offline Support</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-showcase project-section" id="showcase">
+            <h2 class="section-title">Interactive Interface</h2>
+            <div class="interface-details">
+                <div class="interface-card analytics">
+                    <h3>Financial Analytics Dashboard</h3>
+                    <div class="analytics-content">
+                        <p>Comprehensive financial analysis with interactive visualizations:</p>
+                        <div class="metrics-grid">
+                            <div class="metric-group">
+                                <h4>Transaction Analysis</h4>
+                                <ul>
+                                    <li>Income vs expense tracking</li>
+                                    <li>Transaction categorization</li>
+                                    <li>Recurring payment detection</li>
+                                    <li>Payment pattern analysis</li>
+                                </ul>
+                            </div>
+                            <div class="metric-group">
+                                <h4>Business Intelligence</h4>
+                                <ul>
+                                    <li>Customer retention metrics</li>
+                                    <li>Growth trend analysis</li>
+                                    <li>Seasonal patterns</li>
+                                    <li>Revenue forecasting</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="interface-card">
+                    <h3>Tax Preparation Tools</h3>
+                    <div class="analytics-content">
+                        <div class="metrics-grid">
+                            <div class="metric-group">
+                                <h4>Financial Reports</h4>
+                                <ul>
+                                    <li>Quarterly breakdowns</li>
+                                    <li>Annual summaries</li>
+                                    <li>Category-based reporting</li>
+                                    <li>Custom date ranges</li>
+                                </ul>
+                            </div>
+                            <div class="metric-group">
+                                <h4>Export Options</h4>
+                                <ul>
+                                    <li>Excel report generation</li>
+                                    <li>PDF documentation</li>
+                                    <li>Data visualization export</li>
+                                    <li>Raw data access</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="architecture-section project-section" id="architecture">
+            <h2 class="section-title">System Architecture</h2>
+            <div class="architecture-details">
+                <div class="arch-component">
+                    <h3>Core Technologies</h3>
+                    <ul class="component-list">
+                        <li><strong>Frontend:</strong> JavaScript, HTML5, CSS3</li>
+                        <li><strong>Data Processing:</strong> CSV parsing and analysis</li>
+                        <li><strong>Visualization:</strong> Chart.js</li>
+                        <li><strong>Storage:</strong> Client-side only</li>
+                    </ul>
+                </div>
+
+                <div class="arch-component">
+                    <h3>Data Flow</h3>
+                    <ul class="component-list">
+                        <li><strong>Input:</strong> PayPal CSV import</li>
+                        <li><strong>Processing:</strong> Pattern detection algorithms</li>
+                        <li><strong>Analysis:</strong> Transaction categorization</li>
+                        <li><strong>Output:</strong> Interactive visualizations</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="features project-section" id="features">
+            <h2>Core Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Smart Analytics</h3>
+                    <ul class="feature-list">
+                        <li>Business detection algorithms</li>
+                        <li>Recurring payment identification</li>
+                        <li>Multi-currency support</li>
+                        <li>Customer retention tracking</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Visualization Suite</h3>
+                    <ul class="feature-list">
+                        <li>Income vs expense trends</li>
+                        <li>Customer growth patterns</li>
+                        <li>Seasonal analysis</li>
+                        <li>Transaction distributions</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Tax Tools</h3>
+                    <ul class="feature-list">
+                        <li>Quarterly breakdowns</li>
+                        <li>Category sorting</li>
+                        <li>Excel report generation</li>
+                        <li>Year-over-year analysis</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section" id="data-processing">
+            <h2>Data Processing Pipeline</h2>
+            <div class="deep-dive-grid">
+                <div class="deep-dive-card">
+                    <h3>CSV Processing</h3>
+                    <ul class="feature-list">
+                        <li>Automated format detection</li>
+                        <li>Data validation checks</li>
+                        <li>Currency normalization</li>
+                        <li>Transaction deduplication</li>
+                    </ul>
+                </div>
+                
+                <div class="deep-dive-card">
+                    <h3>Pattern Recognition</h3>
+                    <ul class="feature-list">
+                        <li>Recurring payment detection</li>
+                        <li>Business name normalization</li>
+                        <li>Category classification</li>
+                        <li>Trend identification</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="technical-deep-dive project-section" id="technical">
+            <h2>Technical Implementation</h2>
+            <div class="deep-dive-grid">
+                <div class="deep-dive-card">
+                    <h3>Data Processing Pipeline</h3>
+                    <ul class="feature-list">
+                        <li>CSV parsing and validation</li>
+                        <li>Transaction categorization algorithms</li>
+                        <li>Pattern recognition system</li>
+                        <li>Data normalization</li>
+                    </ul>
+                </div>
+
+                <div class="deep-dive-card">
+                    <h3>Privacy & Security</h3>
+                    <ul class="feature-list">
+                        <li>Client-side processing only</li>
+                        <li>No data storage or transmission</li>
+                        <li>Offline functionality</li>
+                        <li>Local file handling</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="technical-deep-dive project-section" id="technical">
+            <h2>Technical Implementation</h2>
+            <div class="deep-dive-grid">
+                <div class="deep-dive-card">
+                    <h3>Front-End Development</h3>
+                    <ul class="feature-list">
+                        <li>Semantic HTML5 structure</li>
+                        <li>CSS3 with flexbox and grid</li>
+                        <li>JavaScript ES6+ features</li>
+                        <li>Responsive design patterns</li>
+                    </ul>
+                </div>
+
+                <div class="deep-dive-card">
+                    <h3>Core Libraries</h3>
+                    <ul class="feature-list">
+                        <li>Chart.js visualization suite</li>
+                        <li>HTML2PDF.js for reports</li>
+                        <li>XLSX.js CSV processing</li>
+                        <li>Custom data parsers</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="technical-challenges project-section" id="challenges">
+            <h2>Technical Challenges</h2>
+            <div class="challenges-grid">
+                <div class="challenge-card">
+                    <div class="challenge-header">
+                        <h3>Performance Optimization</h3>
+                    </div>
+                    <div class="challenge-content">
+                        <p class="problem">Processing large transaction datasets in browser</p>
+                        <div class="solution">
+                            <h4>Solution:</h4>
+                            <ul>
+                                <li>Implemented chunked processing</li>
+                                <li>Optimized data structures</li>
+                                <li>Added progressive loading</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="challenge-card">
+                    <div class="challenge-header">
+                        <h3>Data Standardization</h3>
+                    </div>
+                    <div class="challenge-content">
+                        <p class="problem">Inconsistent PayPal transaction formats</p>
+                        <div class="solution">
+                            <h4>Solution:</h4>
+                            <ul>
+                                <li>Created format detection system</li>
+                                <li>Built data normalization pipeline</li>
+                                <li>Implemented error handling</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="acknowledgements project-section" id="credits">
+            <h2>Credits & Acknowledgements</h2>
+            <div class="acknowledgement-card">
+                <p>This project was inspired by the needs of small business owners and freelancers who require better insights into their PayPal transaction data. Special thanks to the open-source community for the powerful libraries that made this project possible.</p>
+                <p>Built with Chart.js for visualizations, XLSX.js for CSV processing, and HTML2PDF.js for report generation. The project emphasizes privacy and security by processing all data client-side, ensuring user financial data never leaves their browser.</p>
+            </div>
+        </section>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Initialize particles.js
+                particlesJS('particles-js', {
+                    particles: {
+                        number: {
+                            value: 30,
+                            density: {
+                                enable: true,
+                                value_area: 800
+                            }
+                        },
+                        color: {
+                            value: '#3498db'
+                        },
+                        shape: {
+                            type: 'circle'
+                        },
+                        opacity: {
+                            value: 0.3,
+                            random: false,
+                            anim: {
+                                enable: false
+                            }
+                        },
+                        size: {
+                            value: 2,
+                            random: false,
+                            anim: {
+                                enable: false
+                            }
+                        },
+                        line_linked: {
+                            enable: true,
+                            distance: 150,
+                            color: '#3498db',
+                            opacity: 0.2,
+                            width: 1
+                        },
+                        move: {
+                            enable: true,
+                            speed: 0.8,
+                            direction: 'none',
+                            random: false,
+                            straight: false,
+                            out_mode: 'bounce',
+                            bounce: true,
+                            attract: {
+                                enable: false
+                            }
+                        }
+                    },
+                    interactivity: {
+                        detect_on: 'canvas',
+                        events: {
+                            onhover: {
+                                enable: true,
+                                mode: 'grab'
+                            },
+                            onclick: {
+                                enable: false
+                            },
+                            resize: true
+                        },
+                        modes: {
+                            grab: {
+                                distance: 150,
+                                line_linked: {
+                                    opacity: 0.3
+                                }
+                            }
+                        }
+                    },
+                    retina_detect: false
+                });
+
+                // Ensure content is visible
+                document.body.style.opacity = '1';
+                
+                // Add animation delays to sections
+                document.querySelectorAll('.project-section').forEach((section, index) => {
+                    section.style.setProperty('--delay', index + 1);
+                });
+            });
+        </script>
+    </main>
+</body>
+</html>
