@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - RiskSentry ML</title>
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../project.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body class="project-page">
+    <div id="particles-js"></div>
+    <nav>
+        <div class="nav-content">
+            <a href="../index.html" class="back-button">← Back to Portfolio</a>
+        </div>
+    </nav>
+
+    <div class="content-guide">
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#showcase">Interface</a></li>
+            <li><a href="#architecture">Architecture</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#data-processing">Data Processing</a></li>
+            <li><a href="#technical">Technical</a></li>
+            <li><a href="#code-showcase">Code Examples</a></li>
+            <li><a href="#challenges">Challenges</a></li>
+            <li><a href="#credits">Credits</a></li>
+        </ul>
+    </div>
+
+    <main class="project-wrapper">
+        <header class="project-header">
+            <div class="project-logo-container">
+                <img src="../guardlogo.png" alt="RiskSentry ML Logo" class="project-logo">
+            </div>
+            <div class="project-title">
+                <h1>RiskSentry ML</h1>
+            </div>
+            <div class="project-tags">
+                <span>Python</span>
+                <span>Flask</span>
+                <span>scikit-learn</span>
+                <span>Machine Learning</span>
+                <span>Risk Analysis</span>
+                <span>Pattern Detection</span>
+            </div>
+            <div class="live-site-link">
+                <a href="https://jandreanalytics.github.io/FraudDetectionModel/" class="primary-link" target="_blank" rel="noopener noreferrer">View Demo</a>
+                <a href="https://github.com/jandreanalytics/FraudDetectionModel" class="source-code-link" title="View Source Code" target="_blank" rel="noopener noreferrer">
+                    <span class="code-icon">&lt;/&gt;</span>
+                </a>
+            </div>
+        </header>
+
+        <section class="project-overview project-section" id="overview">
+            <h2>Project Overview</h2>
+            <p>RiskSentry ML is a demonstration project showcasing practical machine learning implementation for transaction risk analysis. Built as a learning exercise, it implements a Random Forest Classifier model through a Flask API, demonstrating the complete workflow from data processing to model deployment.</p>
+            
+            <div class="project-stats">
+                <div class="stat">
+                    <h4>Core ML</h4>
+                    <p>Random Forest<br>Feature Engineering<br>Pattern Detection</p>
+                </div>
+                <div class="stat">
+                    <h4>Implementation</h4>
+                    <p>Flask API<br>Real-time Processing<br>Interactive UI</p>
+                </div>
+                <div class="stat">
+                    <h4>Data Focus</h4>
+                    <p>Transaction Analysis<br>Risk Scoring<br>Pattern Recognition</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-showcase project-section" id="showcase">
+            <h2 class="section-title">Risk Assessment Interface</h2>
+            <div class="interface-details">
+                <div class="interface-card analytics">
+                    <h3>Transaction Analysis</h3>
+                    <div class="analytics-content">
+                        <p>Comprehensive risk analysis with multiple detection patterns:</p>
+                        <div class="metrics-grid">
+                            <div class="metric-group">
+                                <h4>Risk Patterns</h4>
+                                <ul>
+                                    <li>Location anomalies</li>
+                                    <li>Time-based risks</li>
+                                    <li>Amount patterns</li>
+                                    <li>Transaction combinations</li>
+                                </ul>
+                            </div>
+                            <div class="metric-group">
+                                <h4>Detection Features</h4>
+                                <ul>
+                                    <li>High-risk country detection</li>
+                                    <li>Night transaction analysis</li>
+                                    <li>Suspicious amount ranges</li>
+                                    <li>Pattern correlation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="interface-card">
+                    <h3>Model Analytics</h3>
+                    <div class="analytics-content">
+                        <div class="metrics-grid">
+                            <div class="metric-group">
+                                <h4>Performance Metrics</h4>
+                                <ul>
+                                    <li>Cross-validation scores</li>
+                                    <li>Feature importance</li>
+                                    <li>Confusion matrix</li>
+                                    <li>ROC curves</li>
+                                </ul>
+                            </div>
+                            <div class="metric-group">
+                                <h4>Real-time Monitoring</h4>
+                                <ul>
+                                    <li>Prediction confidence</li>
+                                    <li>Processing latency</li>
+                                    <li>Model drift detection</li>
+                                    <li>Error tracking</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="architecture-section project-section" id="architecture">
+            <h2 class="section-title">Technical Architecture</h2>
+            <div class="architecture-details">
+                <div class="arch-component">
+                    <h3>ML Pipeline</h3>
+                    <ul class="component-list">
+                        <li><strong>Model:</strong> Random Forest Classifier</li>
+                        <li><strong>Features:</strong> 15 engineered features</li>
+                        <li><strong>Processing:</strong> Real-time scoring</li>
+                        <li><strong>Validation:</strong> Cross-validation setup</li>
+                    </ul>
+                </div>
+
+                <div class="arch-component">
+                    <h3>API Layer</h3>
+                    <ul class="component-list">
+                        <li><strong>Framework:</strong> Flask with REST endpoints</li>
+                        <li><strong>Processing:</strong> Async prediction handling</li>
+                        <li><strong>Security:</strong> Request validation</li>
+                        <li><strong>Format:</strong> JSON response structure</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="features project-section" id="features">
+            <h2>Implementation Details</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Feature Engineering</h3>
+                    <ul class="feature-list">
+                        <li>Time-based pattern extraction</li>
+                        <li>Transaction amount analysis</li>
+                        <li>Location risk scoring</li>
+                        <li>Behavioral pattern detection</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Model Development</h3>
+                    <ul class="feature-list">
+                        <li>Synthetic data generation</li>
+                        <li>Hyperparameter optimization</li>
+                        <li>Cross-validation implementation</li>
+                        <li>Performance metrics tracking</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section" id="data-processing">
+            <h2>Data Processing Pipeline</h2>
+            <div class="deep-dive-grid">
+                <div class="deep-dive-card">
+                    <h3>Feature Engineering</h3>
+                    <ul class="feature-list">
+                        <li>Time-based feature extraction</li>
+                        <li>Geographic risk analysis</li>
+                        <li>Amount pattern detection</li>
+                        <li>Transaction type classification</li>
+                    </ul>
+                </div>
+                
+                <div class="deep-dive-card">
+                    <h3>Model Processing</h3>
+                    <ul class="feature-list">
+                        <li>Random Forest classification</li>
+                        <li>Multi-factor risk scoring</li>
+                        <li>Pattern correlation analysis</li>
+                        <li>Real-time prediction pipeline</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="technical-deep-dive project-section" id="technical">
+            <h2>Technical Implementation</h2>
+            <div class="deep-dive-grid">
+                <div class="deep-dive-card">
+                    <h3>Core Technologies</h3>
+                    <ul class="feature-list">
+                        <li>Python with Flask web framework</li>
+                        <li>scikit-learn ML implementation</li>
+                        <li>NumPy/Pandas data processing</li>
+                        <li>Bootstrap responsive design</li>
+                    </ul>
+                </div>
+
+                <div class="deep-dive-card">
+                    <h3>Machine Learning Pipeline</h3>
+                    <ul class="feature-list">
+                        <li>Random Forest Classifier model</li>
+                        <li>Feature engineering system</li>
+                        <li>Pattern detection algorithms</li>
+                        <li>Probability-based scoring</li>
+                    </ul>
+                </div>
+
+                <div class="deep-dive-card">
+                    <h3>API Architecture</h3>
+                    <ul class="feature-list">
+                        <li>RESTful endpoint design</li>
+                        <li>CORS security configuration</li>
+                        <li>Input validation system</li>
+                        <li>Error handling protocols</li>
+                    </ul>
+                </div>
+
+                <div class="deep-dive-card">
+                    <h3>Data Engineering</h3>
+                    <ul class="feature-list">
+                        <li>Synthetic data generation</li>
+                        <li>Pattern simulation</li>
+                        <li>Time series processing</li>
+                        <li>Data normalization</li>
+                    </ul>
+                </div>
+
+                <div class="deep-dive-card">
+                    <h3>Performance Features</h3>
+                    <ul class="feature-list">
+                        <li>Memory optimization</li>
+                        <li>Response time tuning</li>
+                        <li>Resource management</li>
+                        <li>Efficient data handling</li>
+                    </ul>
+                </div>
+
+                <div class="deep-dive-card">
+                    <h3>Testing Framework</h3>
+                    <ul class="feature-list">
+                        <li>Unit test implementation</li>
+                        <li>API endpoint validation</li>
+                        <li>Pattern detection testing</li>
+                        <li>Response verification</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="code-showcase project-section" id="code-showcase">
+            <h2>Code Implementation Highlights</h2>
+            <div class="code-examples">
+                <div class="code-example">
+                    <h3>Pattern Detection System</h3>
+                    <p>Multi-factor risk analysis with weighted scoring:</p>
+                    <pre><code class="language-python">
+# Complex pattern detection with weighted risk factors
+pattern_risks = {
+    'location_anomaly': bool(df['location'].iloc[0] in ['RU', 'BR', 'CN', 'UK']),
+    'time_anomaly': bool(0 <= df['hour'].iloc[0] <= 5),
+    'amount_anomaly': bool(
+        df['amount'].iloc[0] < 10 or  # Small amounts (card testing)
+        df['amount'].iloc[0] > 500 or  # Large amounts
+        (df['amount'].iloc[0] >= 900 and df['amount'].iloc[0] <= 999.99)  # Suspicious range
+    ),
+    'transaction_type_risk': bool(
+        (df['transaction_type'].iloc[0] == 'atm' and 0 <= df['hour'].iloc[0] <= 5) or
+        (df['transaction_type'].iloc[0] == 'online' and df['amount'].iloc[0] < 10)
+    )
+}
+
+risk_weights = {
+    'location_anomaly': 1.5,
+    'time_anomaly': 1.0,
+    'amount_anomaly': 2.0,
+    'transaction_type_risk': 1.5
+}
+                    </code></pre>
+                </div>
+
+                <div class="code-example">
+                    <h3>Feature Engineering</h3>
+                    <p>Complex risk scoring and indicator generation:</p>
+                    <pre><code class="language-python">
+# Composite risk indicators with multiple factors
+df['risk_score'] = (
+    ((df['hour'] < 6).astype(int)) + 
+    df['amount_999'].astype(int) * 2 +
+    df['amount_high'].astype(int) * 2 +
+    df['is_high_risk_location'].astype(int) * 3
+)
+
+df['card_testing_risk'] = (df['small_amount'] + df['high_velocity'] + df['is_online']) / 3
+df['location_time_risk'] = (df['is_high_risk_location'] + (df['hour'] < 6).astype(int)) / 2
+                    </code></pre>
+                </div>
+
+                <div class="code-example">
+                    <h3>Synthetic Data Generation</h3>
+                    <p>Intelligent pattern-based test data creation:</p>
+                    <pre><code class="language-python">
+def generate_fraudulent_pattern(user_profile):
+    patterns = [
+        # Card testing pattern
+        lambda: {
+            'amount': np.random.uniform(1, 5),
+            'location': np.random.choice(['UK', 'RU', 'BR', 'CN']),
+            'is_fraud': 1,
+            'is_card_testing': True
+        },
+        # After hours + location change
+        lambda: {
+            'amount': user_profile['avg_amount'] * np.random.uniform(3, 6),
+            'location': np.random.choice(['UK', 'RU', 'BR', 'CN']),
+            'timestamp': datetime.now().replace(hour=np.random.randint(1, 5)),
+            'is_fraud': 1
+        }
+    ]
+    return np.random.choice(patterns, p=weights)()
+                    </code></pre>
+                </div>
+
+                <div class="code-example">
+                    <h3>Risk Display Algorithm</h3>
+                    <p>Intelligent probability normalization for UI:</p>
+                    <pre><code class="language-javascript">
+// Intelligent risk display with normalized probability
+const rawProbability = result.fraud_probability * 100;
+let displayProbability;
+
+if (rawProbability <= 11) {
+    // Normal range (0-11% maps to 0-30%)
+    displayProbability = (rawProbability / 11) * 30;
+} else if (rawProbability <= 29) {
+    // Elevated range (12-29% maps to 31-70%)
+    displayProbability = 30 + ((rawProbability - 11) / 18) * 40;
+} else {
+    // High risk range (30-36% maps to 71-100%)
+    displayProbability = 70 + ((rawProbability - 29) / 7) * 30;
+}
+                    </code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="technical-challenges project-section" id="challenges">
+            <h2>Development Challenges</h2>
+            <div class="challenges-grid">
+                <div class="challenge-card">
+                    <div class="challenge-header">
+                        <h3>Model Training</h3>
+                    </div>
+                    <div class="challenge-content">
+                        <p class="problem">Creating realistic synthetic training data</p>
+                        <div class="solution">
+                            <h4>Solution:</h4>
+                            <ul>
+                                <li>Generated balanced pattern sets</li>
+                                <li>Implemented varied risk scenarios</li>
+                                <li>Validated pattern distributions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="challenge-card">
+                    <div class="challenge-header">
+                        <h3>Real-time Processing</h3>
+                    </div>
+                    <div class="challenge-content">
+                        <p class="problem">Optimizing prediction response time</p>
+                        <div class="solution">
+                            <h4>Solution:</h4>
+                            <ul>
+                                <li>Implemented feature caching</li>
+                                <li>Optimized model loading</li>
+                                <li>Added response streaming</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="acknowledgements project-section" id="credits">
+            <h2>Credits</h2>
+            <div class="acknowledgement-card">
+                <p>This project serves as a demonstration of machine learning applications in risk analysis. Built with scikit-learn for the ML components and Flask for the API layer, it showcases the potential of automated risk assessment in financial transactions.</p>
+                <p>Special thanks to the open-source community for the powerful libraries and tools that made this project possible. The project emphasizes the practical application of machine learning techniques for pattern recognition and risk analysis.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // ...existing particles.js configuration...
+    </script>
+</body>
+</html>

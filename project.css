@@ -825,3 +825,45 @@ a:focus,button:focus{
 #technical { --delay: 5; }
 #challenges { --delay: 6; }
 #credits { --delay: 7; }
+
+.code-showcase {
+    margin: 2rem 0;
+}
+
+.code-examples {
+    display: grid;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.code-example {
+    background: rgba(30, 30, 30, 0.95);
+    border-radius: 8px;
+    padding: 1.5rem;
+    border: 1px solid rgba(52, 152, 219, 0.2);
+}
+
+.code-example h3 {
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+.code-example p {
+    color: #888;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.code-example pre {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+.code-example code {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #e0e0e0;
+}
