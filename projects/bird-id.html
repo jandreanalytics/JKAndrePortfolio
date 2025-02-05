@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Bird Species Classifier</title>
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../project.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body class="project-page">
+    <div id="particles-js" style="position: absolute; z-index: 0;"></div>
+    <nav>
+        <div class="nav-content">
+            <a href="../index.html" class="back-button">← Back to Portfolio</a>
+        </div>
+    </nav>
+
+    <div class="content-guide">
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#showcase">Model Interface</a></li>
+            <li><a href="#architecture">Architecture</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#technical">Technical</a></li>
+            <li><a href="#challenges">Challenges</a></li>
+            <li><a href="#credits">Credits</a></li>
+        </ul>
+    </div>
+
+    <main class="project-wrapper">
+        <header class="project-header">
+            <div class="project-logo-container">
+                <img src="../logo.png" alt="Bird ID Logo" class="project-logo">
+            </div>
+            <div class="project-title">
+                <h1>AVIAN VISION ML</h1>
+            </div>
+            <div class="project-tags">
+                <span class="nature-tag">TensorFlow</span>
+                <span class="nature-tag">EfficientNet</span>
+                <span class="nature-tag">Deep Learning</span>
+                <span class="nature-tag">Hugging Face</span>
+                <span class="nature-tag">Computer Vision</span>
+                <span class="nature-tag">Bird Classification</span>
+            </div>
+            <div class="live-site-link" style="position: relative; z-index: 1;">
+                <a href="https://huggingface.co/spaces/jandreanalytics/OneStoneBirdID" class="primary-link" target="_blank" rel="noopener noreferrer">Try Model on Hugging Face</a>
+            </div>
+        </header>
+
+        <section id="overview" class="project-overview project-section">
+            <h2>Project Overview</h2>
+            <p>AVIAN VISION ML represents a significant advancement in automated bird species identification, achieving 91.23% accuracy across 117 North American bird species. Built on a modified EfficientNet-B0 architecture with custom attention mechanisms, this model was trained on 292,500 images (2,500 per species) and transforms the challenging task of fine-grained bird classification into a reliable, accessible tool for both research and conservation applications.</p>
+            
+            <div class="project-stats">
+                <div class="stat">
+                    <h4>Model Stats</h4>
+                    <p>91.23% Accuracy<br>292.5K Training Images<br>7,047 Test Images</p>
+                </div>
+                <div class="stat">
+                    <h4>Architecture</h4>
+                    <p>EfficientNet-B0<br>Custom Attention<br>Multi-scale Features</p>
+                </div>
+                <div class="stat">
+                    <h4>Performance</h4>
+                    <p>11 Perfect Species<br>60+ > 95% Accurate<br>Real-time Inference</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="showcase" class="project-showcase project-section">
+            <h2>Model Interface & Analytics</h2>
+            <div class="interface-details">
+                <div class="interface-card">
+                    <h3>Classification Performance</h3>
+                    <div class="analytics-content">
+                        <p>Comprehensive species coverage with exceptional accuracy:</p>
+                        <div class="metrics-grid">
+                            <div class="metric-group">
+                                <h4>100% Accuracy Species</h4>
+                                <ul>
+                                    <li>Black-billed Cuckoo</li>
+                                    <li>Eastern Towhee</li>
+                                    <li>Gray-cheeked Thrush</li>
+                                    <li>Northern Saw-whet Owl</li>
+                                    <li>Yellow Warbler</li>
+                                </ul>
+                            </div>
+                            <div class="metric-group">
+                                <h4>Family Performance</h4>
+                                <ul>
+                                    <li>Rails & Wrens: 98.2%</li>
+                                    <li>Woodpeckers: 97.3%</li>
+                                    <li>Warblers: 96.4%</li>
+                                    <li>Owls: 97.3%</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="architecture" class="architecture-section project-section">
+            <h2>System Architecture</h2>
+            <div class="architecture-details">
+                <div class="arch-component">
+                    <h3>Core Model</h3>
+                    <ul class="component-list">
+                        <li><strong>Base:</strong> Modified EfficientNet-B0</li>
+                        <li><strong>Attention:</strong> Custom bird-specific mechanisms</li>
+                        <li><strong>Features:</strong> Multi-scale detection system</li>
+                        <li><strong>Processing:</strong> Progressive resolution training</li>
+                    </ul>
+                </div>
+
+                <div class="arch-component">
+                    <h3>Classification System</h3>
+                    <ul class="component-list">
+                        <li><strong>Species:</strong> 117 North American birds</li>
+                        <li><strong>Training:</strong> 2,500 images per species</li>
+                        <li><strong>Accuracy:</strong> 91.23% overall performance</li>
+                        <li><strong>Testing:</strong> 7,047 validation images</li>
+                        <li><strong>Validation:</strong> Cross-environment testing</li>
+                    </ul>
+                </div>
+
+                <div class="arch-component">
+                    <h3>Deployment Stack</h3>
+                    <ul class="component-list">
+                        <li><strong>Platform:</strong> Hugging Face Spaces</li>
+                        <li><strong>Interface:</strong> Gradio UI</li>
+                        <li><strong>Processing:</strong> Real-time inference</li>
+                        <li><strong>Output:</strong> Confidence scores & classifications</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="technical" class="technical-deep-dive project-section">
+            <h2>Technical Implementation</h2>
+            <div class="deep-dive-grid">
+                <div class="deep-dive-card">
+                    <h3>Model Architecture</h3>
+                    <ul class="feature-list">
+                        <li>Modified EfficientNet-B0 backbone</li>
+                        <li>Custom attention mechanisms for bird features</li>
+                        <li>Multi-scale feature detection system</li>
+                        <li>Group-specific attention heads</li>
+                    </ul>
+                </div>
+
+                <div class="deep-dive-card">
+                    <h3>Bird-Specific Optimizations</h3>
+                    <ul class="feature-list">
+                        <li>Head/bill characteristic detection</li>
+                        <li>Wing pattern analysis</li>
+                        <li>Breast marking recognition</li>
+                        <li>Tail shape classification</li>
+                    </ul>
+                </div>
+
+                <div class="deep-dive-card">
+                    <h3>Training Strategy</h3>
+                    <ul class="feature-list">
+                        <li>Progressive resolution approach</li>
+                        <li>Dynamic batch sizing</li>
+                        <li>Adaptive learning rates</li>
+                        <li>Species-specific attention mechanisms</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="challenges" class="technical-challenges project-section">
+            <h2>Technical Challenges & Solutions</h2>
+            <div class="challenges-grid">
+                <div class="challenge-card">
+                    <div class="challenge-header">
+                        <h3>Similar Species Classification</h3>
+                    </div>
+                    <div class="challenge-content">
+                        <p class="problem">Difficulty distinguishing between visually similar species</p>
+                        <div class="solution">
+                            <h4>Solution Implemented:</h4>
+                            <ul>
+                                <li>Custom attention mechanisms for critical features</li>
+                                <li>Enhanced feature extraction</li>
+                                <li>Species-specific discrimination training</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="challenge-card">
+                    <div class="challenge-header">
+                        <h3>Variable Conditions</h3>
+                    </div>
+                    <div class="challenge-content">
+                        <p class="problem">Handling different lighting and environmental conditions</p>
+                        <div class="solution">
+                            <h4>Solution Implemented:</h4>
+                            <ul>
+                                <li>Multi-scale feature analysis</li>
+                                <li>Adaptive augmentation strategies</li>
+                                <li>Robust preprocessing pipeline</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="performance" class="performance-analysis project-section">
+            <h2>Performance Analysis</h2>
+            <div class="interface-details">
+                <div class="interface-card">
+                    <h3>Model Performance Metrics</h3>
+                    <div class="analytics-content">
+                        <p>Comprehensive analysis of classification performance across species:</p>
+                        <div class="metrics-grid">
+                            <div class="metric-group">
+                                <h4>Perfect Classification (100%)</h4>
+                                <ul class="feature-list">
+                                    <li>Black-billed Cuckoo</li>
+                                    <li>Eastern Towhee</li>
+                                    <li>Gray-cheeked Thrush</li>
+                                    <li>Northern Saw-whet Owl</li>
+                                    <li>Yellow Warbler</li>
+                                    <li>And 6 other species</li>
+                                </ul>
+                            </div>
+                            <div class="metric-group">
+                                <h4>High Performance Groups</h4>
+                                <ul class="feature-list">
+                                    <li>Water Birds (98.2% avg)</li>
+                                    <li>Woodpeckers (97.3% avg)</li>
+                                    <li>Warblers (96.4% avg)</li>
+                                    <li>Owls (97.3% avg)</li>
+                                </ul>
+                            </div>
+                            <div class="metric-group">
+                                <h4>Similar Species Accuracy</h4>
+                                <ul class="feature-list">
+                                    <li>Cooper's vs Sharp-shinned Hawk</li>
+                                    <li>Downy vs Hairy Woodpecker</li>
+                                    <li>Yellow vs Yellow-rumped Warbler</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="deployment" class="deployment-section project-section">
+            <h2>Model Deployment</h2>
+            <div class="interface-details">
+                <div class="interface-card">
+                    <h3>Deployment Framework</h3>
+                    <div class="analytics-content">
+                        <div class="metrics-grid">
+                            <div class="metric-group">
+                                <h4>Hugging Face Integration</h4>
+                                <ul class="feature-list">
+                                    <li>Public model deployment</li>
+                                    <li>Easy-to-use inference API</li>
+                                    <li>Optimized for quick predictions</li>
+                                    <li>Comprehensive model documentation</li>
+                                </ul>
+                            </div>
+                            <div class="metric-group">
+                                <h4>Usage Guidelines</h4>
+                                <ul class="feature-list">
+                                    <li>Best practices for image submission</li>
+                                    <li>Confidence score interpretation</li>
+                                    <li>Handling edge cases</li>
+                                    <li>Performance considerations</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="future" class="future-directions project-section">
+            <h2>Future Development</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Model Improvements</h3>
+                    <ul class="feature-list">
+                        <li>Enhanced feature extraction for ground birds</li>
+                        <li>Improved handling of partial occlusions</li>
+                        <li>Seasonal plumage variation support</li>
+                        <li>Juvenile bird identification</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Performance Optimization</h3>
+                    <ul class="feature-list">
+                        <li>Target improvement for sub-80% accuracy species</li>
+                        <li>Enhanced low-light performance</li>
+                        <li>Better distance-based identification</li>
+                        <li>Mobile-optimized inference</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="credits" class="acknowledgements project-section">
+            <h2>Credits</h2>
+            <div class="acknowledgement-card">
+                <p>Model development and training utilized resources from various open-source datasets and research papers. Special thanks to the machine learning community for their contributions to fine-grained visual classification techniques.</p>
+            </div>
+        </section>
+    </main>
+    <script>
+        // ...existing particles.js configuration...
+    </script>
+</body>
+</html>
